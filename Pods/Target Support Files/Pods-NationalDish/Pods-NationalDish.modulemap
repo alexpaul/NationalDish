@@ -1,0 +1,6 @@
+framework module Pods_NationalDish {
+  umbrella header "Pods-NationalDish-umbrella.h"
+
+  export *
+  module * { export * }
+}
