@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35BBAB66E90F5605BB06D902 /* Pods_NationalDishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B8CEEC15A14AF7010CAC02 /* Pods_NationalDishTests.framework */; };
 		5726205B2231E7A7003F0B1E /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726205A2231E7A7003F0B1E /* UIViewController+Alerts.swift */; };
 		5726205D2231EC67003F0B1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5726205C2231EC67003F0B1E /* GoogleService-Info.plist */; };
 		5726205F2231ECE8003F0B1E /* DishesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726205E2231ECE8003F0B1E /* DishesTabBarController.swift */; };
 		5726206122327B22003F0B1E /* AddDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726206022327B22003F0B1E /* AddDishViewController.swift */; };
 		5726206322327B3D003F0B1E /* EditDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726206222327B3D003F0B1E /* EditDishViewController.swift */; };
 		5726206522327B4F003F0B1E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726206422327B4F003F0B1E /* EditProfileViewController.swift */; };
+		572620862232A423003F0B1E /* FirebaseAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572620852232A423003F0B1E /* FirebaseAuthTests.swift */; };
 		57B610BF2231B15000EAD192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610BE2231B15000EAD192 /* AppDelegate.swift */; };
 		57B610C12231B15000EAD192 /* NationalDishesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610C02231B15000EAD192 /* NationalDishesController.swift */; };
 		57B610C42231B15000EAD192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B610C22231B15000EAD192 /* Main.storyboard */; };
@@ -32,13 +34,37 @@
 		6CCDAA5F9E3AA5AF41E724D3 /* Pods_NationalDish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		572620722232A272003F0B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57B610B32231B15000EAD192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57B610BA2231B15000EAD192;
+			remoteInfo = NationalDish;
+		};
+		572620802232A306003F0B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57B610B32231B15000EAD192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57B610BA2231B15000EAD192;
+			remoteInfo = NationalDish;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		25EA2FF499AE5C470280A480 /* Pods-NationalDishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDishTests.release.xcconfig"; path = "Target Support Files/Pods-NationalDishTests/Pods-NationalDishTests.release.xcconfig"; sourceTree = "<group>"; };
+		30B8CEEC15A14AF7010CAC02 /* Pods_NationalDishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NationalDishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4887AACDE1CFCFEA94ECF5AF /* Pods-NationalDishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDishTests.debug.xcconfig"; path = "Target Support Files/Pods-NationalDishTests/Pods-NationalDishTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5726205A2231E7A7003F0B1E /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		5726205C2231EC67003F0B1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5726205E2231ECE8003F0B1E /* DishesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTabBarController.swift; sourceTree = "<group>"; };
 		5726206022327B22003F0B1E /* AddDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishViewController.swift; sourceTree = "<group>"; };
 		5726206222327B3D003F0B1E /* EditDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDishViewController.swift; sourceTree = "<group>"; };
 		5726206422327B4F003F0B1E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		5726206D2232A272003F0B1E /* FirebaseAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5726207B2232A306003F0B1E /* NationalDishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NationalDishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5726207F2232A306003F0B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572620852232A423003F0B1E /* FirebaseAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseAuthTests.swift; path = NationalDish/Controllers/FirebaseAuthTests.swift; sourceTree = SOURCE_ROOT; };
 		57B610BB2231B15000EAD192 /* NationalDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NationalDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B610BE2231B15000EAD192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B610C02231B15000EAD192 /* NationalDishesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalDishesController.swift; sourceTree = "<group>"; };
@@ -63,6 +89,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5726206A2232A272003F0B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572620782232A306003F0B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35BBAB66E90F5605BB06D902 /* Pods_NationalDishTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57B610B82231B15000EAD192 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,6 +120,8 @@
 			children = (
 				5E5F0CB6934D8E27392104B9 /* Pods-NationalDish.debug.xcconfig */,
 				BFB3EEF996B7A22CC766B8C7 /* Pods-NationalDish.release.xcconfig */,
+				4887AACDE1CFCFEA94ECF5AF /* Pods-NationalDishTests.debug.xcconfig */,
+				25EA2FF499AE5C470280A480 /* Pods-NationalDishTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -101,20 +144,30 @@
 			path = "Profile View Controllers";
 			sourceTree = "<group>";
 		};
-		5726206822327C0B003F0B1E /* Dishes Controllers */ = {
+		5726206822327C0B003F0B1E /* Dish View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				57B610C02231B15000EAD192 /* NationalDishesController.swift */,
 				5726206022327B22003F0B1E /* AddDishViewController.swift */,
 				5726206222327B3D003F0B1E /* EditDishViewController.swift */,
 			);
-			path = "Dishes Controllers";
+			path = "Dish View Controllers";
+			sourceTree = "<group>";
+		};
+		5726207C2232A306003F0B1E /* NationalDishTests */ = {
+			isa = PBXGroup;
+			children = (
+				5726207F2232A306003F0B1E /* Info.plist */,
+				572620852232A423003F0B1E /* FirebaseAuthTests.swift */,
+			);
+			path = NationalDishTests;
 			sourceTree = "<group>";
 		};
 		57B610B22231B15000EAD192 = {
 			isa = PBXGroup;
 			children = (
 				57B610BD2231B15000EAD192 /* NationalDish */,
+				5726207C2232A306003F0B1E /* NationalDishTests */,
 				57B610BC2231B15000EAD192 /* Products */,
 				1F544869C863ABD1B935F4A1 /* Pods */,
 				B43EED385BC9333726713070 /* Frameworks */,
@@ -125,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				57B610BB2231B15000EAD192 /* NationalDish.app */,
+				5726206D2232A272003F0B1E /* FirebaseAuthTests.xctest */,
+				5726207B2232A306003F0B1E /* NationalDishTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				5726206622327BA1003F0B1E /* Account Login Controllers */,
-				5726206822327C0B003F0B1E /* Dishes Controllers */,
+				5726206822327C0B003F0B1E /* Dish View Controllers */,
 				5726206722327BC1003F0B1E /* Profile View Controllers */,
 				5726205E2231ECE8003F0B1E /* DishesTabBarController.swift */,
 			);
@@ -207,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */,
+				30B8CEEC15A14AF7010CAC02 /* Pods_NationalDishTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,6 +270,45 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5726206C2232A272003F0B1E /* FirebaseAuthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572620742232A272003F0B1E /* Build configuration list for PBXNativeTarget "FirebaseAuthTests" */;
+			buildPhases = (
+				572620692232A272003F0B1E /* Sources */,
+				5726206A2232A272003F0B1E /* Frameworks */,
+				5726206B2232A272003F0B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				572620732232A272003F0B1E /* PBXTargetDependency */,
+			);
+			name = FirebaseAuthTests;
+			productName = FirebaseAuthTests;
+			productReference = 5726206D2232A272003F0B1E /* FirebaseAuthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5726207A2232A306003F0B1E /* NationalDishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572620822232A306003F0B1E /* Build configuration list for PBXNativeTarget "NationalDishTests" */;
+			buildPhases = (
+				EF58FA60B59487D1E7BAC4FF /* [CP] Check Pods Manifest.lock */,
+				572620772232A306003F0B1E /* Sources */,
+				572620782232A306003F0B1E /* Frameworks */,
+				572620792232A306003F0B1E /* Resources */,
+				2CAB6F712303221A978B3C8E /* [CP] Embed Pods Frameworks */,
+				E600D23E0290BD4361086F3E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				572620812232A306003F0B1E /* PBXTargetDependency */,
+			);
+			name = NationalDishTests;
+			productName = NationalDishTests;
+			productReference = 5726207B2232A306003F0B1E /* NationalDishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		57B610BA2231B15000EAD192 /* NationalDish */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57B610CD2231B15200EAD192 /* Build configuration list for PBXNativeTarget "NationalDish" */;
@@ -244,6 +339,15 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Alex Paul";
 				TargetAttributes = {
+					5726206C2232A272003F0B1E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 57B610BA2231B15000EAD192;
+					};
+					5726207A2232A306003F0B1E = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = 57B610BA2231B15000EAD192;
+					};
 					57B610BA2231B15000EAD192 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -263,11 +367,27 @@
 			projectRoot = "";
 			targets = (
 				57B610BA2231B15000EAD192 /* NationalDish */,
+				5726206C2232A272003F0B1E /* FirebaseAuthTests */,
+				5726207A2232A306003F0B1E /* NationalDishTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5726206B2232A272003F0B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572620792232A306003F0B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57B610B92231B15000EAD192 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,7 +425,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E5B8D3614F5505162EA7075 /* [CP] Embed Pods Frameworks */ = {
+		2CAB6F712303221A978B3C8E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,10 +433,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NationalDish/Pods-NationalDish-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NationalDishTests/Pods-NationalDishTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -330,6 +451,45 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NationalDishTests/Pods-NationalDishTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E5B8D3614F5505162EA7075 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NationalDish/Pods-NationalDish-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -363,9 +523,68 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NationalDish/Pods-NationalDish-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E600D23E0290BD4361086F3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NationalDishTests/Pods-NationalDishTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NationalDishTests/Pods-NationalDishTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF58FA60B59487D1E7BAC4FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NationalDishTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		572620692232A272003F0B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572620772232A306003F0B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572620862232A423003F0B1E /* FirebaseAuthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57B610B72231B15000EAD192 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +611,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		572620732232A272003F0B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57B610BA2231B15000EAD192 /* NationalDish */;
+			targetProxy = 572620722232A272003F0B1E /* PBXContainerItemProxy */;
+		};
+		572620812232A306003F0B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57B610BA2231B15000EAD192 /* NationalDish */;
+			targetProxy = 572620802232A306003F0B1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		57B610C22231B15000EAD192 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -412,6 +644,91 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		572620752232A272003F0B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = FirebaseAuthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.FirebaseAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NationalDish.app/NationalDish";
+			};
+			name = Debug;
+		};
+		572620762232A272003F0B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = FirebaseAuthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.FirebaseAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NationalDish.app/NationalDish";
+			};
+			name = Release;
+		};
+		572620832232A306003F0B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4887AACDE1CFCFEA94ECF5AF /* Pods-NationalDishTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = NationalDishTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.NationalDishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NationalDish.app/NationalDish";
+			};
+			name = Debug;
+		};
+		572620842232A306003F0B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25EA2FF499AE5C470280A480 /* Pods-NationalDishTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = NationalDishTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.NationalDishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NationalDish.app/NationalDish";
+			};
+			name = Release;
+		};
 		57B610CB2231B15200EAD192 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -569,6 +886,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		572620742232A272003F0B1E /* Build configuration list for PBXNativeTarget "FirebaseAuthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572620752232A272003F0B1E /* Debug */,
+				572620762232A272003F0B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572620822232A306003F0B1E /* Build configuration list for PBXNativeTarget "NationalDishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572620832232A306003F0B1E /* Debug */,
+				572620842232A306003F0B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		57B610B62231B15000EAD192 /* Build configuration list for PBXProject "NationalDish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

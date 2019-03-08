@@ -1,0 +1,6 @@
+framework module Pods_NationalDishTests {
+  umbrella header "Pods-NationalDishTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
