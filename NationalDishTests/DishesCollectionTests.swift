@@ -75,6 +75,7 @@ class DishesCollectionTests: XCTestCase {
       .document(documentRef.documentID)
       .setData([DishesCollectionKeys.DocumentIdKey : documentRef.documentID,
                 "country"         : "Saint Lucia",
+                "createdDate"     : Date.getISOTimestamp(), 
                 "userId"          : currentUser?.uid ?? "no user id",
                 "dishDescription" : "Green Fig & Salt Fish",
                 "imageURL"        : "https://d3s9bgz0ch5ert.cloudfront.net/article/destinations/6-hours-in/st-lucia/green-fig-and-salt-fish.jpg"

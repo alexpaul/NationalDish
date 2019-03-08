@@ -9,6 +9,7 @@
 import Foundation
 
 struct Dish {
+  let country: String
   let dishDescription: String
   let documentId: String
   let createdDate: String

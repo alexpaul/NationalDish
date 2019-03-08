@@ -14,15 +14,6 @@ struct NDUser {
   let email: String
   let photoURL: String?
   let joinedDate: String
-  let firstName: String?
-  let lastName: String?
-  let bio: String?
-  //let documentId: String
-  //let createdDate: String
 }
 
-
-//let reviewer = Reviewer.init(userId: authDataResult.user.uid,
-//                             displayName: username,
-//                             email: authDataResult.user.email!,
 
