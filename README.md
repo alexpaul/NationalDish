@@ -28,3 +28,16 @@ NationalDish app enables users to post their country's National Dish to the publ
 - [ ] selecting a national dish post shows a detail view of the dish 
 - [ ] user can see more options via an action sheet to carry out appropriate actions e.g delete, edit, save image
 
+
+## Users Collection Database Schema 
+
+<p align="center">
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/users-collections.png" width="700" height="325" />
+</p>
+
+## Dishes Collection Database Schema 
+
+<p align="center">
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-collections.png" width="700" height="325" />
+</p>
+  
