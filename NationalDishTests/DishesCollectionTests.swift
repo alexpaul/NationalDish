@@ -88,4 +88,19 @@ class DishesCollectionTests: XCTestCase {
     }
     wait(for: [exp], timeout: 3.0)
   }
+  
+  func testFetchNationalDishes() {
+    let exp = expectation(description: "fetched dishes")
+    DBService.firestoreDB
+      .collection(DishesCollectionKeys.CollectionKey)
+      .getDocuments { (snapshot, error) in
+        if let error = error {
+          XCTFail("failed to fetch dishes with error: \(error.localizedDescription)")
+        } else if let snapshot = snapshot {
+          XCTAssertGreaterThan(snapshot.documents.count, 0, "should have more than 0 documents")
+        }
+        exp.fulfill()
+    }
+    wait(for: [exp], timeout: 3.0)
+  }
 }
