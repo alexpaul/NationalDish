@@ -32,12 +32,12 @@ NationalDish app enables users to post their country's National Dish to the publ
 ## Users Collection Database Schema 
 
 <p align="center">
-  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/users-collection.png" width="700" height="325" />
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/users-collection.png" width="700" height="500" />
 </p>
 
 ## Dishes Collection Database Schema 
 
 <p align="center">
-  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-collection.png" width="700" height="325" />
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-collection.png" width="700" height="500" />
 </p>
   
