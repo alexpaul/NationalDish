@@ -47,10 +47,7 @@ final class AuthService {
                                      displayName: username,
                                      email: authDataResult.user.email!,
                                      photoURL: nil,
-                                     joinedDate: Date.getISOTimestamp(),
-                                     firstName: nil,
-                                     lastName: nil,
-                                     bio: nil)
+                                     joinedDate: Date.getISOTimestamp())
         DBService.createNDUser(user: user, completion: { (error) in
           if let error = error {
             self.authserviceCreateNewAccountDelegate?.didRecieveErrorCreatingAccount(self, error: error)

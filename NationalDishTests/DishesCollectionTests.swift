@@ -14,7 +14,8 @@ import Firebase
 class DishesCollectionTests: XCTestCase {
 
   //let email = "bob1@bob1.com"
-  let email = "alex@alex.com"
+  //let email = "alex@alex.com"
+  let email = "istishna@istishna.com"
   let password = "123456"
   var currentUser: User?
   
@@ -29,7 +30,7 @@ class DishesCollectionTests: XCTestCase {
   }
   
   func testCreateAuthenticatedAccount() {
-    let newEmailAccount = "bob1@bob1.com"
+    let newEmailAccount = "kona@kona.com"
     let exp = expectation(description: "created user")
     Auth.auth().createUser(withEmail: newEmailAccount, password: "123456") { (authDataResult, error) in
       if let error = error {
@@ -74,11 +75,11 @@ class DishesCollectionTests: XCTestCase {
       .collection(DishesCollectionKeys.CollectionKey)
       .document(documentRef.documentID)
       .setData([DishesCollectionKeys.DocumentIdKey : documentRef.documentID,
-                "country"         : "Saint Lucia",
+                "country"         : "Itish",
                 "createdDate"     : Date.getISOTimestamp(), 
                 "userId"          : currentUser?.uid ?? "no user id",
-                "dishDescription" : "Green Fig & Salt Fish",
-                "imageURL"        : "https://d3s9bgz0ch5ert.cloudfront.net/article/destinations/6-hours-in/st-lucia/green-fig-and-salt-fish.jpg"
+                "dishDescription" : "Itish",
+                "imageURL"        : "http://www.123countries.com/wp-content/uploads/2015/10/National-Dish-Ilish-Image.jpg"
       ]) { (error) in
         if let error = error {
           XCTFail("failed to create national dish with error: \(error.localizedDescription)")

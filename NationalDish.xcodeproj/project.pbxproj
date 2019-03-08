@@ -151,9 +151,9 @@
 			children = (
 				5726207F2232A306003F0B1E /* Info.plist */,
 				572620882232B5A5003F0B1E /* FirebaseAuthTests.swift */,
+				5726208C2232B5FE003F0B1E /* NDUsersCollectionTests.swift */,
 				5726208A2232B5E7003F0B1E /* DishesCollectionTests.swift */,
 				5726208E2232CE81003F0B1E /* FirebaseStorageTests.swift */,
-				5726208C2232B5FE003F0B1E /* NDUsersCollectionTests.swift */,
 				572620872232B5A4003F0B1E /* NationalDishTests-Bridging-Header.h */,
 			);
 			path = NationalDishTests;

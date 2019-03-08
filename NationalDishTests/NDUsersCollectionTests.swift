@@ -13,15 +13,17 @@ import Firebase
 
 class NDUsersCollectionTests: XCTestCase {
 
-  let email = "bob1@bob1.com"
+  //let email = "bob1@bob1.com"
   //let email = "alex@alex.com"
+  //let email = "kona@kona.com"
+  let email = "istishna@istishna.com"
   let password = "123456"
   var currentUser: User?
   
   override func setUp() {
     // Put setup code here. This method is called before the invocation of each test method in the class.
     FirebaseApp.configure()
-    //testSignInExistingAuthenticatedAccount()
+    testSignInExistingAuthenticatedAccount()
   }
   
   override func tearDown() {
@@ -29,7 +31,7 @@ class NDUsersCollectionTests: XCTestCase {
   }
   
   func testCreateAuthenticatedAccount() {
-    let newEmailAccount = "bob1@bob1.com"
+    let newEmailAccount = "istishna@istishna.com"
     let exp = expectation(description: "created user")
     Auth.auth().createUser(withEmail: newEmailAccount, password: "123456") { (authDataResult, error) in
       if let error = error {
@@ -63,6 +65,26 @@ class NDUsersCollectionTests: XCTestCase {
       exp.fulfill()
     } catch {
       XCTFail("failed to sign out user with error: \(error)")
+    }
+    wait(for: [exp], timeout: 3.0)
+  }
+  
+  func testCreateDBUser() {
+    let exp = expectation(description: "created db user")
+    let userId = currentUser?.uid ?? ""
+    DBService.firestoreDB
+      .collection(NDUsersCollectionKeys.CollectionKey)
+      .document(userId)
+      .setData(["displayName" : "istishna",
+                "email"       : currentUser?.email ?? "",
+                "joinedDate"  : Date.getISOTimestamp(),
+                "photoURL"    : "",
+                "userId"      : currentUser?.uid ?? ""
+      ]) { (error) in
+        if let error = error {
+          XCTFail("failed to create db user with error: \(error.localizedDescription)")
+        }
+        exp.fulfill()
     }
     wait(for: [exp], timeout: 3.0)
   }
