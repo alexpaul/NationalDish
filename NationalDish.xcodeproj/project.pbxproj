@@ -14,7 +14,10 @@
 		5726206122327B22003F0B1E /* AddDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726206022327B22003F0B1E /* AddDishViewController.swift */; };
 		5726206322327B3D003F0B1E /* EditDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726206222327B3D003F0B1E /* EditDishViewController.swift */; };
 		5726206522327B4F003F0B1E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726206422327B4F003F0B1E /* EditProfileViewController.swift */; };
-		572620862232A423003F0B1E /* FirebaseAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572620852232A423003F0B1E /* FirebaseAuthTests.swift */; };
+		572620892232B5A5003F0B1E /* FirebaseAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572620882232B5A5003F0B1E /* FirebaseAuthTests.swift */; };
+		5726208B2232B5E7003F0B1E /* DishesCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726208A2232B5E7003F0B1E /* DishesCollectionTests.swift */; };
+		5726208D2232B5FE003F0B1E /* NDUsersCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726208C2232B5FE003F0B1E /* NDUsersCollectionTests.swift */; };
+		5726208F2232CE81003F0B1E /* FirebaseStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726208E2232CE81003F0B1E /* FirebaseStorageTests.swift */; };
 		57B610BF2231B15000EAD192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610BE2231B15000EAD192 /* AppDelegate.swift */; };
 		57B610C12231B15000EAD192 /* NationalDishesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610C02231B15000EAD192 /* NationalDishesController.swift */; };
 		57B610C42231B15000EAD192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B610C22231B15000EAD192 /* Main.storyboard */; };
@@ -35,13 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		572620722232A272003F0B1E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 57B610B32231B15000EAD192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 57B610BA2231B15000EAD192;
-			remoteInfo = NationalDish;
-		};
 		572620802232A306003F0B1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 57B610B32231B15000EAD192 /* Project object */;
@@ -61,10 +57,13 @@
 		5726206022327B22003F0B1E /* AddDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishViewController.swift; sourceTree = "<group>"; };
 		5726206222327B3D003F0B1E /* EditDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDishViewController.swift; sourceTree = "<group>"; };
 		5726206422327B4F003F0B1E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		5726206D2232A272003F0B1E /* FirebaseAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5726207B2232A306003F0B1E /* NationalDishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NationalDishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5726207F2232A306003F0B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		572620852232A423003F0B1E /* FirebaseAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseAuthTests.swift; path = NationalDish/Controllers/FirebaseAuthTests.swift; sourceTree = SOURCE_ROOT; };
+		572620872232B5A4003F0B1E /* NationalDishTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NationalDishTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		572620882232B5A5003F0B1E /* FirebaseAuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthTests.swift; sourceTree = "<group>"; };
+		5726208A2232B5E7003F0B1E /* DishesCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesCollectionTests.swift; sourceTree = "<group>"; };
+		5726208C2232B5FE003F0B1E /* NDUsersCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDUsersCollectionTests.swift; sourceTree = "<group>"; };
+		5726208E2232CE81003F0B1E /* FirebaseStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageTests.swift; sourceTree = "<group>"; };
 		57B610BB2231B15000EAD192 /* NationalDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NationalDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B610BE2231B15000EAD192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B610C02231B15000EAD192 /* NationalDishesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalDishesController.swift; sourceTree = "<group>"; };
@@ -89,13 +88,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5726206A2232A272003F0B1E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		572620782232A306003F0B1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,7 +150,11 @@
 			isa = PBXGroup;
 			children = (
 				5726207F2232A306003F0B1E /* Info.plist */,
-				572620852232A423003F0B1E /* FirebaseAuthTests.swift */,
+				572620882232B5A5003F0B1E /* FirebaseAuthTests.swift */,
+				5726208A2232B5E7003F0B1E /* DishesCollectionTests.swift */,
+				5726208E2232CE81003F0B1E /* FirebaseStorageTests.swift */,
+				5726208C2232B5FE003F0B1E /* NDUsersCollectionTests.swift */,
+				572620872232B5A4003F0B1E /* NationalDishTests-Bridging-Header.h */,
 			);
 			path = NationalDishTests;
 			sourceTree = "<group>";
@@ -178,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				57B610BB2231B15000EAD192 /* NationalDish.app */,
-				5726206D2232A272003F0B1E /* FirebaseAuthTests.xctest */,
 				5726207B2232A306003F0B1E /* NationalDishTests.xctest */,
 			);
 			name = Products;
@@ -270,24 +265,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5726206C2232A272003F0B1E /* FirebaseAuthTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 572620742232A272003F0B1E /* Build configuration list for PBXNativeTarget "FirebaseAuthTests" */;
-			buildPhases = (
-				572620692232A272003F0B1E /* Sources */,
-				5726206A2232A272003F0B1E /* Frameworks */,
-				5726206B2232A272003F0B1E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				572620732232A272003F0B1E /* PBXTargetDependency */,
-			);
-			name = FirebaseAuthTests;
-			productName = FirebaseAuthTests;
-			productReference = 5726206D2232A272003F0B1E /* FirebaseAuthTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		5726207A2232A306003F0B1E /* NationalDishTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 572620822232A306003F0B1E /* Build configuration list for PBXNativeTarget "NationalDishTests" */;
@@ -339,10 +316,6 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Alex Paul";
 				TargetAttributes = {
-					5726206C2232A272003F0B1E = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 57B610BA2231B15000EAD192;
-					};
 					5726207A2232A306003F0B1E = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -367,20 +340,12 @@
 			projectRoot = "";
 			targets = (
 				57B610BA2231B15000EAD192 /* NationalDish */,
-				5726206C2232A272003F0B1E /* FirebaseAuthTests */,
 				5726207A2232A306003F0B1E /* NationalDishTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5726206B2232A272003F0B1E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		572620792232A306003F0B1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,6 +404,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Toucan/Toucan.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -453,6 +419,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toucan.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -477,6 +444,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Toucan/Toucan.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -491,6 +459,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toucan.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -570,18 +539,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		572620692232A272003F0B1E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		572620772232A306003F0B1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				572620862232A423003F0B1E /* FirebaseAuthTests.swift in Sources */,
+				572620892232B5A5003F0B1E /* FirebaseAuthTests.swift in Sources */,
+				5726208D2232B5FE003F0B1E /* NDUsersCollectionTests.swift in Sources */,
+				5726208F2232CE81003F0B1E /* FirebaseStorageTests.swift in Sources */,
+				5726208B2232B5E7003F0B1E /* DishesCollectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,11 +577,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		572620732232A272003F0B1E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 57B610BA2231B15000EAD192 /* NationalDish */;
-			targetProxy = 572620722232A272003F0B1E /* PBXContainerItemProxy */;
-		};
 		572620812232A306003F0B1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 57B610BA2231B15000EAD192 /* NationalDish */;
@@ -644,46 +604,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		572620752232A272003F0B1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZEKMNK5YD3;
-				INFOPLIST_FILE = FirebaseAuthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.FirebaseAuthTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NationalDish.app/NationalDish";
-			};
-			name = Debug;
-		};
-		572620762232A272003F0B1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZEKMNK5YD3;
-				INFOPLIST_FILE = FirebaseAuthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.FirebaseAuthTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NationalDish.app/NationalDish";
-			};
-			name = Release;
-		};
 		572620832232A306003F0B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4887AACDE1CFCFEA94ECF5AF /* Pods-NationalDishTests.debug.xcconfig */;
@@ -700,6 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.NationalDishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NationalDishTests/NationalDishTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -723,6 +644,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.NationalDishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NationalDishTests/NationalDishTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NationalDish.app/NationalDish";
@@ -886,15 +808,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		572620742232A272003F0B1E /* Build configuration list for PBXNativeTarget "FirebaseAuthTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				572620752232A272003F0B1E /* Debug */,
-				572620762232A272003F0B1E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		572620822232A306003F0B1E /* Build configuration list for PBXNativeTarget "NationalDishTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

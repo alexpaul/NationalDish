@@ -8,6 +8,7 @@ def national_dish_pods
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'Kingfisher'
+  pod 'Toucan'
 end
 
 target 'NationalDish' do

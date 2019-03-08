@@ -69,7 +69,7 @@ final class DBService {
         DishesCollectionKeys.UserIdKey          : dish.userId,
         DishesCollectionKeys.DishDescritionKey  : dish.dishDescription,
         DishesCollectionKeys.ImageURLKey        : dish.imageURL,
-        DishesCollectionKeys.DocumentIdKey      : dish.documentId
+        DishesCollectionKeys.DocumentIdKey  : dish.documentId
         ])
       { (error) in
         if let error = error {
