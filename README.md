@@ -40,4 +40,11 @@ NationalDish app enables users to post their country's National Dish to the publ
 <p align="center">
   <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-collection.png" width="900" height="600" />
 </p>
+
+## Posting Images 
+
+- when posting profile images use the following image name "profileImages/\(userId)"
+- when posting a dish image use the folloing image name "nationalDishImages/\(userId)/documentId-goes-here"
+
+
   
