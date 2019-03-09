@@ -34,6 +34,7 @@
 		57B610E62231BAF400EAD192 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610E52231BAF400EAD192 /* LoginViewController.swift */; };
 		57B610EA2231BB3700EAD192 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610E92231BB3700EAD192 /* CreateAccountController.swift */; };
 		57B610EC2231C9A000EAD192 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B610EB2231C9A000EAD192 /* LoginView.storyboard */; };
+		57DAB51D2233E09B00FDAEB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB51C2233E09B00FDAEB2 /* Constants.swift */; };
 		6CCDAA5F9E3AA5AF41E724D3 /* Pods_NationalDish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		57B610E52231BAF400EAD192 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57B610E92231BB3700EAD192 /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		57B610EB2231C9A000EAD192 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
+		57DAB51C2233E09B00FDAEB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5E5F0CB6934D8E27392104B9 /* Pods-NationalDish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDish.debug.xcconfig"; path = "Target Support Files/Pods-NationalDish/Pods-NationalDish.debug.xcconfig"; sourceTree = "<group>"; };
 		879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NationalDish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB3EEF996B7A22CC766B8C7 /* Pods-NationalDish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDish.release.xcconfig"; path = "Target Support Files/Pods-NationalDish/Pods-NationalDish.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,15 +184,16 @@
 		57B610BD2231B15000EAD192 /* NationalDish */ = {
 			isa = PBXGroup;
 			children = (
-				5726205A2231E7A7003F0B1E /* UIViewController+Alerts.swift */,
 				57B610D12231B38800EAD192 /* Firebase Services */,
 				57B610D92231B3FF00EAD192 /* Models */,
 				57B610D22231B39700EAD192 /* Controllers */,
-				57B610ED2231C9A900EAD192 /* Storyboards */,
 				57B610DE2231B79E00EAD192 /* Date Helpers */,
+				57B610ED2231C9A900EAD192 /* Storyboards */,
 				57B610D02231B26C00EAD192 /* Supporting Files */,
 				57B610CA2231B15200EAD192 /* Info.plist */,
 				5726205C2231EC67003F0B1E /* GoogleService-Info.plist */,
+				57DAB51B2233E08300FDAEB2 /* Utilities */,
+				57DAB51A2233E05300FDAEB2 /* Extensions */,
 			);
 			path = NationalDish;
 			sourceTree = "<group>";
@@ -251,6 +254,22 @@
 				57B610EB2231C9A000EAD192 /* LoginView.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		57DAB51A2233E05300FDAEB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5726205A2231E7A7003F0B1E /* UIViewController+Alerts.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57DAB51B2233E08300FDAEB2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				57DAB51C2233E09B00FDAEB2 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B43EED385BC9333726713070 /* Frameworks */ = {
@@ -571,6 +590,7 @@
 				5726205F2231ECE8003F0B1E /* DishesTabBarController.swift in Sources */,
 				57B610DD2231B42C00EAD192 /* NDUser.swift in Sources */,
 				57B610E62231BAF400EAD192 /* LoginViewController.swift in Sources */,
+				57DAB51D2233E09B00FDAEB2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

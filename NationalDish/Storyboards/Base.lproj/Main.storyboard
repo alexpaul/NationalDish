@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="looking forward to reading about your national dish....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-Sd-ztk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Looking forward to reading about your national dish....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-Sd-ztk">
                                 <rect key="frame" x="8" y="72" width="359" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -27,18 +27,17 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-q8-iwN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-image" translatesAutoresizingMaskIntoConstraints="NO" id="qJW-P5-MNw">
                                 <rect key="frame" x="0.0" y="305" width="375" height="362"/>
-                                <state key="normal" image="placeholder-image"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1tr-q8-iwN" firstAttribute="height" secondItem="NYj-Av-kYe" secondAttribute="height" multiplier="0.6" id="6X7-Gi-va3"/>
-                            <constraint firstItem="1tr-q8-iwN" firstAttribute="trailing" secondItem="NYj-Av-kYe" secondAttribute="trailing" id="CMT-Dx-VcJ"/>
+                            <constraint firstItem="qJW-P5-MNw" firstAttribute="trailing" secondItem="NYj-Av-kYe" secondAttribute="trailing" id="8yb-Up-iLl"/>
+                            <constraint firstItem="qJW-P5-MNw" firstAttribute="leading" secondItem="NYj-Av-kYe" secondAttribute="leading" id="EuE-BD-nXJ"/>
+                            <constraint firstItem="qJW-P5-MNw" firstAttribute="height" secondItem="NYj-Av-kYe" secondAttribute="height" multiplier="0.6" id="QB6-Fz-WSM"/>
+                            <constraint firstItem="qJW-P5-MNw" firstAttribute="bottom" secondItem="NYj-Av-kYe" secondAttribute="bottom" id="SEu-nT-Trx"/>
                             <constraint firstItem="zwL-Sd-ztk" firstAttribute="leading" secondItem="NYj-Av-kYe" secondAttribute="leading" constant="8" id="WMo-Q5-DGc"/>
-                            <constraint firstItem="1tr-q8-iwN" firstAttribute="bottom" secondItem="NYj-Av-kYe" secondAttribute="bottom" id="c32-6j-b35"/>
-                            <constraint firstItem="1tr-q8-iwN" firstAttribute="leading" secondItem="NYj-Av-kYe" secondAttribute="leading" id="cL2-c8-e9D"/>
                             <constraint firstItem="zwL-Sd-ztk" firstAttribute="trailing" secondItem="NYj-Av-kYe" secondAttribute="trailing" constant="-8" id="heN-mm-BLE"/>
                             <constraint firstItem="zwL-Sd-ztk" firstAttribute="top" secondItem="NYj-Av-kYe" secondAttribute="top" constant="8" id="igh-IH-5Gv"/>
                         </constraints>
@@ -56,6 +55,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dishDescriptionTextView" destination="zwL-Sd-ztk" id="J6h-o5-gi5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ty-wE-aCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
