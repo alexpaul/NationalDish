@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="305" width="375" height="362"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P5T-NR-Kab">
-                                <rect key="frame" x="16" y="80" width="343" height="40"/>
+                                <rect key="frame" x="8" y="80" width="359" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5pa-Fq-lW2"/>
@@ -49,9 +49,9 @@
                             <constraint firstItem="P5T-NR-Kab" firstAttribute="top" secondItem="NYj-Av-kYe" secondAttribute="top" constant="16" id="NuL-Zv-lEF"/>
                             <constraint firstItem="qJW-P5-MNw" firstAttribute="height" secondItem="NYj-Av-kYe" secondAttribute="height" multiplier="0.6" id="QB6-Fz-WSM"/>
                             <constraint firstItem="qJW-P5-MNw" firstAttribute="bottom" secondItem="NYj-Av-kYe" secondAttribute="bottom" id="SEu-nT-Trx"/>
-                            <constraint firstItem="P5T-NR-Kab" firstAttribute="leading" secondItem="NYj-Av-kYe" secondAttribute="leading" constant="16" id="SWI-Cf-Taj"/>
+                            <constraint firstItem="P5T-NR-Kab" firstAttribute="leading" secondItem="NYj-Av-kYe" secondAttribute="leading" constant="8" id="SWI-Cf-Taj"/>
                             <constraint firstItem="zwL-Sd-ztk" firstAttribute="leading" secondItem="NYj-Av-kYe" secondAttribute="leading" constant="8" id="WMo-Q5-DGc"/>
-                            <constraint firstItem="NYj-Av-kYe" firstAttribute="trailing" secondItem="P5T-NR-Kab" secondAttribute="trailing" constant="16" id="gJn-qf-gOX"/>
+                            <constraint firstItem="NYj-Av-kYe" firstAttribute="trailing" secondItem="P5T-NR-Kab" secondAttribute="trailing" constant="8" id="gJn-qf-gOX"/>
                             <constraint firstItem="zwL-Sd-ztk" firstAttribute="trailing" secondItem="NYj-Av-kYe" secondAttribute="trailing" constant="-8" id="heN-mm-BLE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NYj-Av-kYe"/>
@@ -90,32 +90,12 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DishCell" textLabel="oJ3-R5-3az" detailTextLabel="4Qx-W2-a1F" imageView="ERo-6P-wkk" style="IBUITableViewCellStyleSubtitle" id="YX0-YL-zTV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DishCell" id="YX0-YL-zTV" customClass="DishCell" customModule="NationalDish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YX0-YL-zTV" id="Q3a-qt-6YU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oJ3-R5-3az">
-                                                    <rect key="frame" x="74" y="5" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Qx-W2-a1F">
-                                                    <rect key="frame" x="74" y="25.5" width="44" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="placeholder-image" id="ERo-6P-wkk">
-                                                    <rect key="frame" x="15" y="0.0" width="44" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

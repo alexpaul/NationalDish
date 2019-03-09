@@ -37,6 +37,8 @@
 		57DAB51D2233E09B00FDAEB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB51C2233E09B00FDAEB2 /* Constants.swift */; };
 		57DAB51F2233EBFD00FDAEB2 /* DBService+Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB51E2233EBFC00FDAEB2 /* DBService+Dish.swift */; };
 		57DAB5212233EC2F00FDAEB2 /* DBService+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB5202233EC2F00FDAEB2 /* DBService+User.swift */; };
+		57DAB5252233F1E300FDAEB2 /* DishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB5232233F1E300FDAEB2 /* DishCell.swift */; };
+		57DAB5262233F1E300FDAEB2 /* DishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DAB5242233F1E300FDAEB2 /* DishCell.xib */; };
 		6CCDAA5F9E3AA5AF41E724D3 /* Pods_NationalDish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		57DAB51C2233E09B00FDAEB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57DAB51E2233EBFC00FDAEB2 /* DBService+Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBService+Dish.swift"; sourceTree = "<group>"; };
 		57DAB5202233EC2F00FDAEB2 /* DBService+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBService+User.swift"; sourceTree = "<group>"; };
+		57DAB5232233F1E300FDAEB2 /* DishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCell.swift; sourceTree = "<group>"; };
+		57DAB5242233F1E300FDAEB2 /* DishCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishCell.xib; sourceTree = "<group>"; };
 		5E5F0CB6934D8E27392104B9 /* Pods-NationalDish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDish.debug.xcconfig"; path = "Target Support Files/Pods-NationalDish/Pods-NationalDish.debug.xcconfig"; sourceTree = "<group>"; };
 		879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NationalDish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB3EEF996B7A22CC766B8C7 /* Pods-NationalDish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDish.release.xcconfig"; path = "Target Support Files/Pods-NationalDish/Pods-NationalDish.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 				57B610D12231B38800EAD192 /* Firebase Services */,
 				57B610D92231B3FF00EAD192 /* Models */,
 				57B610D22231B39700EAD192 /* Controllers */,
+				57DAB5222233F1B800FDAEB2 /* Views */,
 				57B610DE2231B79E00EAD192 /* Date Helpers */,
 				57B610ED2231C9A900EAD192 /* Storyboards */,
 				57B610D02231B26C00EAD192 /* Supporting Files */,
@@ -276,6 +281,15 @@
 				57DAB51C2233E09B00FDAEB2 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		57DAB5222233F1B800FDAEB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57DAB5232233F1E300FDAEB2 /* DishCell.swift */,
+				57DAB5242233F1E300FDAEB2 /* DishCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B43EED385BC9333726713070 /* Frameworks */ = {
@@ -385,6 +399,7 @@
 				57B610C92231B15200EAD192 /* LaunchScreen.storyboard in Resources */,
 				57B610C62231B15200EAD192 /* Assets.xcassets in Resources */,
 				5726205D2231EC67003F0B1E /* GoogleService-Info.plist in Resources */,
+				57DAB5262233F1E300FDAEB2 /* DishCell.xib in Resources */,
 				57B610C42231B15000EAD192 /* Main.storyboard in Resources */,
 				57B610EC2231C9A000EAD192 /* LoginView.storyboard in Resources */,
 			);
@@ -591,6 +606,7 @@
 				57B610DB2231B41700EAD192 /* Dish.swift in Sources */,
 				57B610E22231B7EE00EAD192 /* String+DateExtensions.swift in Sources */,
 				57B610C12231B15000EAD192 /* NationalDishesController.swift in Sources */,
+				57DAB5252233F1E300FDAEB2 /* DishCell.swift in Sources */,
 				5726206522327B4F003F0B1E /* EditProfileViewController.swift in Sources */,
 				57B610BF2231B15000EAD192 /* AppDelegate.swift in Sources */,
 				57B610EA2231BB3700EAD192 /* CreateAccountController.swift in Sources */,

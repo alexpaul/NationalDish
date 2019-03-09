@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="DishCell" customModule="NationalDish" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b1l-cq-U7I">
+                        <rect key="frame" x="0.0" y="-0.5" width="120" height="120.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="M6z-sc-fn0"/>
+                            <constraint firstAttribute="height" constant="120" id="wdi-Dm-GUc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dish discription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPI-7X-bHl">
+                        <rect key="frame" x="128" y="88" width="231" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8b-nh-726">
+                        <rect key="frame" x="128" y="49.5" width="231" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhR-J0-37f">
+                        <rect key="frame" x="128" y="11" width="231" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XPI-7X-bHl" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="8BY-9Q-wr7"/>
+                    <constraint firstAttribute="trailing" secondItem="Q8b-nh-726" secondAttribute="trailing" constant="16" id="8s5-Te-pog"/>
+                    <constraint firstItem="b1l-cq-U7I" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AD9-Pb-vHm"/>
+                    <constraint firstItem="b1l-cq-U7I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BjF-45-7H3"/>
+                    <constraint firstItem="Q8b-nh-726" firstAttribute="centerY" secondItem="b1l-cq-U7I" secondAttribute="centerY" id="GiP-rv-5oJ"/>
+                    <constraint firstItem="qhR-J0-37f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="aYc-dI-hO3"/>
+                    <constraint firstItem="qhR-J0-37f" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="c5v-fD-89y"/>
+                    <constraint firstItem="qhR-J0-37f" firstAttribute="leading" secondItem="b1l-cq-U7I" secondAttribute="trailing" constant="8" id="lbo-dV-A4a"/>
+                    <constraint firstItem="Q8b-nh-726" firstAttribute="leading" secondItem="b1l-cq-U7I" secondAttribute="trailing" constant="8" id="oMk-kS-CL5"/>
+                    <constraint firstItem="XPI-7X-bHl" firstAttribute="leading" secondItem="b1l-cq-U7I" secondAttribute="trailing" constant="8" id="yfD-XG-m3Y"/>
+                    <constraint firstItem="XPI-7X-bHl" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="zl1-yF-Pgw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countryLabel" destination="qhR-J0-37f" id="Fc9-Vd-YtC"/>
+                <outlet property="dishDescriptionLabel" destination="XPI-7X-bHl" id="U7v-Bn-WAD"/>
+                <outlet property="dishImageView" destination="b1l-cq-U7I" id="QbO-sl-4RE"/>
+                <outlet property="displayNameLabel" destination="Q8b-nh-726" id="wGF-hK-31q"/>
+            </connections>
+            <point key="canvasLocation" x="-159.19999999999999" y="-167.31634182908547"/>
+        </tableViewCell>
+    </objects>
+</document>
