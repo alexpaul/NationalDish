@@ -51,6 +51,12 @@ NationalDish app enables users to post their country's National Dish to the publ
 - when posting profile images use the following image name "profileImages/\(userId)"
 - when posting a dish image use the folloing image name "nationalDishImages/\(userId)/documentId-goes-here"
 
+**Login View**    
+<p align="center">
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/login-view.png" width="250" height="541" />
+</p>
+
+
 **Add Dish Screen**   
 <p align="center">
   <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/add-dish-view.png" width="250" height="541" />
@@ -60,4 +66,10 @@ NationalDish app enables users to post their country's National Dish to the publ
 <p align="center">
   <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-view.png" width="250" height="541" />
 </p>
+
+**Profile View**    
+<p align="center">
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/profile-view.png" width="250" height="541" />
+</p>
+
 
