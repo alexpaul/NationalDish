@@ -35,6 +35,8 @@
 		57B610EA2231BB3700EAD192 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610E92231BB3700EAD192 /* CreateAccountController.swift */; };
 		57B610EC2231C9A000EAD192 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B610EB2231C9A000EAD192 /* LoginView.storyboard */; };
 		57DAB51D2233E09B00FDAEB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB51C2233E09B00FDAEB2 /* Constants.swift */; };
+		57DAB51F2233EBFD00FDAEB2 /* DBService+Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB51E2233EBFC00FDAEB2 /* DBService+Dish.swift */; };
+		57DAB5212233EC2F00FDAEB2 /* DBService+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DAB5202233EC2F00FDAEB2 /* DBService+User.swift */; };
 		6CCDAA5F9E3AA5AF41E724D3 /* Pods_NationalDish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		57B610E92231BB3700EAD192 /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		57B610EB2231C9A000EAD192 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 		57DAB51C2233E09B00FDAEB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		57DAB51E2233EBFC00FDAEB2 /* DBService+Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBService+Dish.swift"; sourceTree = "<group>"; };
+		57DAB5202233EC2F00FDAEB2 /* DBService+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBService+User.swift"; sourceTree = "<group>"; };
 		5E5F0CB6934D8E27392104B9 /* Pods-NationalDish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDish.debug.xcconfig"; path = "Target Support Files/Pods-NationalDish/Pods-NationalDish.debug.xcconfig"; sourceTree = "<group>"; };
 		879F6AA42F2B995A049DBA3C /* Pods_NationalDish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NationalDish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB3EEF996B7A22CC766B8C7 /* Pods-NationalDish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDish.release.xcconfig"; path = "Target Support Files/Pods-NationalDish/Pods-NationalDish.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			children = (
 				57B610D32231B3B100EAD192 /* AuthService.swift */,
 				57B610D52231B3BC00EAD192 /* DBService.swift */,
+				57DAB5202233EC2F00FDAEB2 /* DBService+User.swift */,
+				57DAB51E2233EBFC00FDAEB2 /* DBService+Dish.swift */,
 				57B610D72231B3C600EAD192 /* StorageService.swift */,
 			);
 			path = "Firebase Services";
@@ -573,12 +579,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DAB5212233EC2F00FDAEB2 /* DBService+User.swift in Sources */,
 				57B610D82231B3C600EAD192 /* StorageService.swift in Sources */,
 				57B610E02231B7C900EAD192 /* Date+Extensions.swift in Sources */,
 				57B610E42231BAD300EAD192 /* ProfileViewController.swift in Sources */,
 				57B610D42231B3B100EAD192 /* AuthService.swift in Sources */,
 				5726206322327B3D003F0B1E /* EditDishViewController.swift in Sources */,
 				5726206122327B22003F0B1E /* AddDishViewController.swift in Sources */,
+				57DAB51F2233EBFD00FDAEB2 /* DBService+Dish.swift in Sources */,
 				57B610D62231B3BC00EAD192 /* DBService.swift in Sources */,
 				57B610DB2231B41700EAD192 /* Dish.swift in Sources */,
 				57B610E22231B7EE00EAD192 /* String+DateExtensions.swift in Sources */,

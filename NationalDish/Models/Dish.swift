@@ -16,6 +16,15 @@ struct Dish {
   let imageURL: String
   let userId: String
   
+  init(country: String, dishDescription: String, documentId: String, createdDate: String, imageURL: String, userId: String) {
+    self.country = country
+    self.dishDescription = dishDescription
+    self.documentId = documentId
+    self.createdDate = createdDate
+    self.imageURL = imageURL
+    self.userId = userId
+  }
+  
   init(dict: [String: Any]) {
     self.country = dict[DishesCollectionKeys.CountryKey] as? String ?? ""
     self.dishDescription = dict[DishesCollectionKeys.DishDescritionKey] as? String ?? ""

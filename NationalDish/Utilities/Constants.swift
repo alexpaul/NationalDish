@@ -10,4 +10,6 @@ import Foundation
 
 struct Constants {
   static let DishDescriptionPlaceholder = "Looking forward to reading about your national dish....."
+  static let DishImagePath = "nationalDishImages/" // nationalDishImages/{userId}/{documentId-goes-here}
+  static let ProfileImagePath = "profileImages/" // profileImages/{userId}
 }

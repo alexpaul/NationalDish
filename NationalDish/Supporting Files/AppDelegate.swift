@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     FirebaseApp.configure()
-    
-    //try? Auth.auth().signOut()
-    
+        
     window = UIWindow(frame: UIScreen.main.bounds)
     if let _ = AppDelegate.authservice.getCurrentUser() {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -30,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     } else {
       let storyboard = UIStoryboard(name: "LoginView", bundle: nil)
       let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-      window?.rootViewController = loginViewController
+      window?.rootViewController = UINavigationController(rootViewController: loginViewController)
     }
     window?.makeKeyAndVisible()
     
