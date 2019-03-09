@@ -19,10 +19,10 @@ NationalDish app enables users to post their country's National Dish to the publ
 - [x] user can sign in to existing account
 - [ ] user can sign out of account
 - [x] a database user should also be created during the authenticate account creation process
-- [ ] create national feed controller 
+- [x] create national feed controller 
 - [ ] create profile view controller 
 - [ ] user can edit profile 
-- [ ] user can create a national dish post included adding a photo from camera or photo library 
+- [x] user can create a national dish post included adding a photo from camera or photo library 
 - [ ] user can edit their national dish post 
 - [ ] user can delete national dish post
 - [ ] selecting a national dish post shows a detail view of the dish 
