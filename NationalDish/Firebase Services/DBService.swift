@@ -12,10 +12,8 @@ import Firebase
 
 struct NDUsersCollectionKeys {
   static let CollectionKey = "users"
-  static let ReviewerIdKey = "userId"
+  static let UserIdKey = "userId"
   static let DisplayNameKey = "displayName"
-  static let FirstNameKey = "firstName"
-  static let LastNameKey = "lastName"
   static let EmailKey = "email"
   static let PhotoURLKey = "photoURL"
   static let JoinedDateKey = "joinedDate"

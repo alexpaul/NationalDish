@@ -50,25 +50,32 @@ class NationalDishesController: UIViewController {
     super.viewWillDisappear(true)
     listener.remove()
   }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard let indexPath = tableView.indexPathForSelectedRow,
-      let editDishViewController = segue.destination as? EditDishViewController else {
-        fatalError("prepare for segue nil")
-    }
-  }
 }
 
 extension NationalDishesController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return dishes.count
+    return 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "DishCell", for: indexPath)
-    let dish = dishes[indexPath.row]
-    cell.imageView?.kf.setImage(with: URL(string: dish.imageURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
     return cell
+  }
+  
+  private func fetchDishCreator(userId: String, cell: UITableViewCell, dish: Dish) {
+    DBService.firestoreDB
+      .collection(NDUsersCollectionKeys.CollectionKey)
+      .whereField(NDUsersCollectionKeys.UserIdKey, isEqualTo: userId)
+      .getDocuments { (snapshot, error) in
+        if let error = error {
+          print("failed to fetch dish creator with error: \(error.localizedDescription)")
+        } else if let snapshot = snapshot?.documents.first {
+          let user = NDUser(dict: snapshot.data())
+          cell.textLabel?.text = "\(user.displayName), \(dish.country)"
+          cell.detailTextLabel?.text = user.displayName
+        }
+    }
+    
   }
 }
 

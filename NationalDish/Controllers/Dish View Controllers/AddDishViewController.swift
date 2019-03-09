@@ -8,9 +8,17 @@
 
 import UIKit
 
-class AddDishViewController: UITabBarController {
+class AddDishViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+    dismiss(animated: true)
+  }
+  
+  @IBAction func addDishButtonPressed(_ sender: UIBarButtonItem) {
+    dismiss(animated: true)
   }
 }
