@@ -12,6 +12,11 @@ NationalDish app enables users to post their country's National Dish to the publ
 - [x] setup firestore database 
 - [x] setup firesbase storage
 
+**Firebase Resources**    
+- [Authentication](https://firebase.google.com/docs/auth/?authuser=1)    
+- [Firestore Database](https://firebase.google.com/docs/firestore/?authuser=1)   
+- [Storage](https://firebase.google.com/docs/storage/?authuser=1)   
+
 ## NationalDish MVP Checklist 
 
 - [x] create app login screen 
