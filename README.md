@@ -48,11 +48,11 @@ NationalDish app enables users to post their country's National Dish to the publ
 
 **Add Dish Screen**   
 <p align="center">
-  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/add-dish-view.png" width="200" height="433" />
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/add-dish-view.png" width="250" height="541" />
 </p>
 
 **Dishes View**    
 <p align="center">
-  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-view.png" width="200" height="433" />
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-view.png" width="250" height="541" />
 </p>
 
