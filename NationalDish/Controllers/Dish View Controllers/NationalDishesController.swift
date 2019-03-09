@@ -52,6 +52,8 @@ class NationalDishesController: UIViewController {
     super.viewWillDisappear(true)
     listener.remove()
   }
+  
+  // TODO: segue to detail view controller when cell is selected
 }
 
 extension NationalDishesController: UITableViewDataSource {

@@ -13,4 +13,8 @@ class EditDishViewController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()    
   }
+  
+  // TODO: should be able to edit the following:
+  // TODO: can edit the dishDescription
+  // TODO: can edit the country
 }
