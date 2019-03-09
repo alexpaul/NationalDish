@@ -47,4 +47,4 @@ NationalDish app enables users to post their country's National Dish to the publ
 - when posting a dish image use the folloing image name "nationalDishImages/\(userId)/documentId-goes-here"
 
 
-  
+ ![add dish screen](https://github.com/alexpaul/NationalDish/blob/master/Images/add-dish-view.png)
