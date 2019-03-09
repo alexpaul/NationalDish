@@ -23,6 +23,7 @@ struct NDUsersCollectionKeys {
 
 struct DishesCollectionKeys {
   static let CollectionKey = "dishes"
+  static let CountryKey = "country"
   static let DishDescritionKey = "dishDescription"
   static let UserIdKey = "userId"
   static let CreatedDateKey = "createdDate"

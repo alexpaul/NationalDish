@@ -15,4 +15,13 @@ struct Dish {
   let createdDate: String
   let imageURL: String
   let userId: String
+  
+  init(dict: [String: Any]) {
+    self.country = dict[DishesCollectionKeys.CountryKey] as? String ?? ""
+    self.dishDescription = dict[DishesCollectionKeys.DishDescritionKey] as? String ?? ""
+    self.documentId = dict[DishesCollectionKeys.DocumentIdKey] as? String ?? ""
+    self.createdDate = dict[DishesCollectionKeys.CreatedDateKey] as? String ?? ""
+    self.imageURL = dict[DishesCollectionKeys.ImageURLKey] as? String ?? ""
+    self.userId = dict[DishesCollectionKeys.UserIdKey] as? String ?? ""
+  }
 }

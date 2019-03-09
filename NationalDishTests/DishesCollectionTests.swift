@@ -22,7 +22,7 @@ class DishesCollectionTests: XCTestCase {
   override func setUp() {
     // Put setup code here. This method is called before the invocation of each test method in the class.
     FirebaseApp.configure()
-    testSignInExistingAuthenticatedAccount()
+    //testSignInExistingAuthenticatedAccount()
   }
   
   override func tearDown() {
@@ -30,7 +30,7 @@ class DishesCollectionTests: XCTestCase {
   }
   
   func testCreateAuthenticatedAccount() {
-    let newEmailAccount = "kona@kona.com"
+    let newEmailAccount = "anh@anh.com"
     let exp = expectation(description: "created user")
     Auth.auth().createUser(withEmail: newEmailAccount, password: "123456") { (authDataResult, error) in
       if let error = error {
@@ -75,11 +75,11 @@ class DishesCollectionTests: XCTestCase {
       .collection(DishesCollectionKeys.CollectionKey)
       .document(documentRef.documentID)
       .setData([DishesCollectionKeys.DocumentIdKey : documentRef.documentID,
-                "country"         : "Itish",
+                "country"         : "Sweden",
                 "createdDate"     : Date.getISOTimestamp(), 
                 "userId"          : currentUser?.uid ?? "no user id",
-                "dishDescription" : "Itish",
-                "imageURL"        : "http://www.123countries.com/wp-content/uploads/2015/10/National-Dish-Ilish-Image.jpg"
+                "dishDescription" : "Swedish Meatballs",
+                "imageURL"        : "https://i1.wp.com/blog.ingredientmatcher.com/wp-content/uploads/2014/06/SwedishMeatballs1.jpg"
       ]) { (error) in
         if let error = error {
           XCTFail("failed to create national dish with error: \(error.localizedDescription)")

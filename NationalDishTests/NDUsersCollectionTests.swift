@@ -16,7 +16,7 @@ class NDUsersCollectionTests: XCTestCase {
   //let email = "bob1@bob1.com"
   //let email = "alex@alex.com"
   //let email = "kona@kona.com"
-  let email = "istishna@istishna.com"
+  let email = "anh@anh.com"
   let password = "123456"
   var currentUser: User?
   
@@ -31,7 +31,7 @@ class NDUsersCollectionTests: XCTestCase {
   }
   
   func testCreateAuthenticatedAccount() {
-    let newEmailAccount = "istishna@istishna.com"
+    let newEmailAccount = "anh@anh.com"
     let exp = expectation(description: "created user")
     Auth.auth().createUser(withEmail: newEmailAccount, password: "123456") { (authDataResult, error) in
       if let error = error {
@@ -75,7 +75,7 @@ class NDUsersCollectionTests: XCTestCase {
     DBService.firestoreDB
       .collection(NDUsersCollectionKeys.CollectionKey)
       .document(userId)
-      .setData(["displayName" : "istishna",
+      .setData(["displayName" : "anh",
                 "email"       : currentUser?.email ?? "",
                 "joinedDate"  : Date.getISOTimestamp(),
                 "photoURL"    : "",
