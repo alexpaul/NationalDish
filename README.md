@@ -28,6 +28,7 @@ NationalDish app enables users to post their country's National Dish to the publ
 - [ ] create profile view controller 
 - [ ] user can edit profile 
 - [x] user can create a national dish post included adding a photo from camera or photo library 
+- [ ] dishes are sorted by most recently added
 - [ ] user can edit their national dish post 
 - [ ] user can delete national dish post
 - [ ] selecting a national dish post shows a detail view of the dish 
@@ -65,6 +66,7 @@ NationalDish app enables users to post their country's National Dish to the publ
 
 - user can create a dish 
 - dish includes: country, description and a photo 
+- dishes are sorted by most recently added
 
 <p align="center">
   <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/add-dish-view.png" width="250" height="541" />
