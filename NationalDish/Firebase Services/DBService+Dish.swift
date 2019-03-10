@@ -37,4 +37,31 @@ extension DBService {
         }
     }
   }
+  
+  static public func deleteDish(dish: Dish, completion: @escaping (Error?) -> Void) {
+    DBService.firestoreDB
+      .collection(DishesCollectionKeys.CollectionKey)
+      .document(dish.documentId)
+      .delete { (error) in
+        if let error = error {
+          completion(error)
+        } else {
+          completion(nil)
+        }
+    }
+  }
+  
+  static public func fetchDishCreator(userId: String, completion: @escaping (Error?, NDUser?) -> Void) {
+    DBService.firestoreDB
+      .collection(NDUsersCollectionKeys.CollectionKey)
+      .whereField(NDUsersCollectionKeys.UserIdKey, isEqualTo: userId)
+      .getDocuments { (snapshot, error) in
+        if let error = error {
+          completion(error, nil)
+        } else if let snapshot = snapshot?.documents.first {
+          let dishCreator = NDUser(dict: snapshot.data())
+          completion(nil, dishCreator)
+        }
+    }
+  }
 }

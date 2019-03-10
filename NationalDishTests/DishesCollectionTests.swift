@@ -14,15 +14,15 @@ import Firebase
 class DishesCollectionTests: XCTestCase {
 
   //let email = "bob1@bob1.com"
-  //let email = "alex@alex.com"
-  let email = "istishna@istishna.com"
+  let email = "alex@alex.com"
+  //let email = "istishna@istishna.com"
   let password = "123456"
   var currentUser: User?
   
   override func setUp() {
     // Put setup code here. This method is called before the invocation of each test method in the class.
     FirebaseApp.configure()
-    //testSignInExistingAuthenticatedAccount()
+    testSignInExistingAuthenticatedAccount()
   }
   
   override func tearDown() {
@@ -75,10 +75,10 @@ class DishesCollectionTests: XCTestCase {
       .collection(DishesCollectionKeys.CollectionKey)
       .document(documentRef.documentID)
       .setData([DishesCollectionKeys.DocumentIdKey : documentRef.documentID,
-                "country"         : "Sweden",
+                "country"         : "Saint Lucia",
                 "createdDate"     : Date.getISOTimestamp(), 
                 "userId"          : currentUser?.uid ?? "no user id",
-                "dishDescription" : "Swedish Meatballs",
+                "dishDescription" : "Green",
                 "imageURL"        : "https://i1.wp.com/blog.ingredientmatcher.com/wp-content/uploads/2014/06/SwedishMeatballs1.jpg"
       ]) { (error) in
         if let error = error {

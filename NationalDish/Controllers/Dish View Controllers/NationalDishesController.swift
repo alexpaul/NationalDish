@@ -55,6 +55,19 @@ class NationalDishesController: UIViewController {
   }
   
   // TODO: segue to detail view controller when cell is selected
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "Show Dish Details" {
+      guard let indexPath = sender as? IndexPath,
+        let cell = tableView.cellForRow(at: indexPath) as? DishCell,
+        let dishDVC = segue.destination as? DishDetailViewController else {
+          fatalError("cannot segue to dishDVC")
+      }
+      let dish = dishes[indexPath.row]
+      dishDVC.displayName = cell.displayNameLabel.text
+      dishDVC.dish = dish
+    }
+  }
 }
 
 extension NationalDishesController: UITableViewDataSource {
@@ -76,16 +89,12 @@ extension NationalDishesController: UITableViewDataSource {
   }
   
   private func fetchDishCreator(userId: String, cell: DishCell, dish: Dish) {
-    DBService.firestoreDB
-      .collection(NDUsersCollectionKeys.CollectionKey)
-      .whereField(NDUsersCollectionKeys.UserIdKey, isEqualTo: userId)
-      .getDocuments { (snapshot, error) in
-        if let error = error {
-          print("failed to fetch dish creator with error: \(error.localizedDescription)")
-        } else if let snapshot = snapshot?.documents.first {
-          let user = NDUser(dict: snapshot.data())
-          cell.displayNameLabel.text = "@" + user.displayName
-        }
+    DBService.fetchDishCreator(userId: userId) { (error, dishCreator) in
+      if let error = error {
+        print("failed to fetch dish creator with error: \(error.localizedDescription)")
+      } else if let dishCreator = dishCreator {
+        cell.displayNameLabel.text = "@" + dishCreator.displayName
+      }
     }
   }
 }
@@ -93,6 +102,10 @@ extension NationalDishesController: UITableViewDataSource {
 extension NationalDishesController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return Constants.DishCellHeight
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "Show Dish Details", sender: indexPath)
   }
 }
 
