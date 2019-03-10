@@ -39,6 +39,7 @@ class NationalDishesController: UIViewController {
           print("failed to fetch dishes with error: \(error.localizedDescription)")
         } else if let snapshot = snapshot {
           self?.dishes = snapshot.documents.map { Dish(dict: $0.data()) }
+                                           .sorted { $0.createdDate.date() > $1.createdDate.date() }
         }
     }
   }

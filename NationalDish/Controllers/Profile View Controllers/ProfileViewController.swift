@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController {
   }
   
   // TODO: write a function to query firestore database for only the current user's posted dishes
+  // TODO: sort by most recently added
 }
 
 extension ProfileViewController: UITableViewDataSource {
