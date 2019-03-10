@@ -36,11 +36,13 @@ class DishDetailViewController: UIViewController {
   
   @IBAction func moreInfoButtonPressed(_ sender: UIBarButtonItem) {
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-    let saveImageAction = UIAlertAction(title: "Save Image", style: .default) { (action) in
-      
+    let saveImageAction = UIAlertAction(title: "Save Image", style: .default) { [unowned self] (action) in
+      if let image = self.dishImageView.image {
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+      }
     }
-    let editAction = UIAlertAction(title: "Edit", style: .default) { (action) in
-      
+    let editAction = UIAlertAction(title: "Edit", style: .default) { [unowned self] (action) in
+      self.showEditView()
     }
     let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] (action) in
       self.confirmDeletionActionSheet(handler: { (action) in
@@ -65,5 +67,15 @@ class DishDetailViewController: UIViewController {
         })
       }
     }
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "Show Edit Dish" {
+      
+    }
+  }
+  
+  private func showEditView() {
+    performSegue(withIdentifier: "Show Edit Dish", sender: nil)
   }
 }

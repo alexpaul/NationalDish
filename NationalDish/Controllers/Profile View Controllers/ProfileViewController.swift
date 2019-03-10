@@ -44,6 +44,12 @@ class ProfileViewController: UIViewController {
   
   // TODO: write a function to query firestore database for only the current user's posted dishes
   // TODO: sort by most recently added
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "Show Edit Profile" {
+      
+    }
+  }
 }
 
 extension ProfileViewController: UITableViewDataSource {
@@ -75,5 +81,7 @@ extension ProfileViewController: ProfileHeaderViewDelegate {
   func willSignOut(_ profileHeaderView: ProfileHeaderView) {
     authservice.signOutAccount()
   }
-  func willEditProfile(_ profileHeaderView: ProfileHeaderView) {}
+  func willEditProfile(_ profileHeaderView: ProfileHeaderView) {
+    performSegue(withIdentifier: "Show Edit Profile", sender: nil)
+  }
 }

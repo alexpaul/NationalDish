@@ -8,13 +8,21 @@
 
 import UIKit
 
-class EditDishViewController: UITabBarController {
+class EditDishViewController: UIViewController {
   
   override func viewDidLoad() {
-    super.viewDidLoad()    
+    super.viewDidLoad()
   }
   
   // TODO: should be able to edit the following:
   // TODO: can edit the dishDescription
   // TODO: can edit the country
+  
+  @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+    dismiss(animated: true)
+  }
+  
+  @IBAction func saveEditButtonPressed(_ sender: UIBarButtonItem) {
+    dismiss(animated: true)
+  }
 }
