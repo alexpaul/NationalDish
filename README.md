@@ -22,17 +22,17 @@ NationalDish app enables users to post their country's National Dish to the publ
 - [x] create app login screen 
 - [x] user can create an account 
 - [x] user can sign in to existing account
-- [ ] user can sign out of account
+- [x] user can sign out of account
 - [x] a database user should also be created during the authenticate account creation process
 - [x] create national feed controller 
 - [ ] create profile view controller 
 - [ ] user can edit profile 
 - [x] user can create a national dish post included adding a photo from camera or photo library 
-- [ ] dishes are sorted by most recently added
+- [x] dishes are sorted by most recently added
 - [ ] user can edit their national dish post 
-- [ ] user can delete national dish post
-- [ ] selecting a national dish post shows a detail view of the dish 
-- [ ] user can see more options via an action sheet to carry out appropriate actions e.g delete, edit, save image
+- [x] user can delete national dish post
+- [x] selecting a national dish post shows a detail view of the dish 
+- [x] user can see more options via an action sheet to carry out appropriate actions e.g delete, edit, save image
 
 
 ## Users Collection Database Schema 
