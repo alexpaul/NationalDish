@@ -8,15 +8,19 @@
 
 import UIKit
 
-// TODO: use custom delegation to signal actions from edit and sign out buttons 
+protocol ProfileHeaderViewDelegate: AnyObject {
+  func willSignOut(_ profileHeaderView: ProfileHeaderView)
+  func willEditProfile(_ profileHeaderView: ProfileHeaderView)
+}
 
 class ProfileHeaderView: UIView {
-  
   @IBOutlet var contentView: UIView!
   @IBOutlet weak var profileImageView: CircularImageView!
   @IBOutlet weak var displayNameLabel: UILabel!
   @IBOutlet weak var editButton: UIButton!
   @IBOutlet weak var signOutButton: UIButton!
+  
+  weak var delegate: ProfileHeaderViewDelegate?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -33,11 +37,12 @@ class ProfileHeaderView: UIView {
     addSubview(contentView)
     contentView.frame = bounds
   }
+  
   @IBAction func signOutButtonPressed(_ sender: UIButton) {
-    
+    delegate?.willSignOut(self)
   }
   
   @IBAction func editButtonPressed(_ sender: UIButton) {
-    
+    delegate?.willEditProfile(self)
   }
 }

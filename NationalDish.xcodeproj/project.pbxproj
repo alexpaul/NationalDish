@@ -18,6 +18,7 @@
 		5726208B2232B5E7003F0B1E /* DishesCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726208A2232B5E7003F0B1E /* DishesCollectionTests.swift */; };
 		5726208D2232B5FE003F0B1E /* NDUsersCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726208C2232B5FE003F0B1E /* NDUsersCollectionTests.swift */; };
 		5726208F2232CE81003F0B1E /* FirebaseStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726208E2232CE81003F0B1E /* FirebaseStorageTests.swift */; };
+		575A9ABD22354383003AE4D0 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A9ABC22354383003AE4D0 /* UIViewController+Navigation.swift */; };
 		57B610BF2231B15000EAD192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610BE2231B15000EAD192 /* AppDelegate.swift */; };
 		57B610C12231B15000EAD192 /* NationalDishesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B610C02231B15000EAD192 /* NationalDishesController.swift */; };
 		57B610C42231B15000EAD192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B610C22231B15000EAD192 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		5726208A2232B5E7003F0B1E /* DishesCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesCollectionTests.swift; sourceTree = "<group>"; };
 		5726208C2232B5FE003F0B1E /* NDUsersCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDUsersCollectionTests.swift; sourceTree = "<group>"; };
 		5726208E2232CE81003F0B1E /* FirebaseStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageTests.swift; sourceTree = "<group>"; };
+		575A9ABC22354383003AE4D0 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		57B610BB2231B15000EAD192 /* NationalDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NationalDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B610BE2231B15000EAD192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B610C02231B15000EAD192 /* NationalDishesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalDishesController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,15 @@
 			path = NationalDishTests;
 			sourceTree = "<group>";
 		};
+		575A9ABE223543C8003AE4D0 /* UIViewController Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5726205A2231E7A7003F0B1E /* UIViewController+Alerts.swift */,
+				575A9ABC22354383003AE4D0 /* UIViewController+Navigation.swift */,
+			);
+			path = "UIViewController Extensions";
+			sourceTree = "<group>";
+		};
 		57B610B22231B15000EAD192 = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +216,6 @@
 				57B610D92231B3FF00EAD192 /* Models */,
 				57B610D22231B39700EAD192 /* Controllers */,
 				57DAB5222233F1B800FDAEB2 /* Views */,
-				57B610DE2231B79E00EAD192 /* Date Helpers */,
 				57B610ED2231C9A900EAD192 /* Storyboards */,
 				57B610D02231B26C00EAD192 /* Supporting Files */,
 				57B610CA2231B15200EAD192 /* Info.plist */,
@@ -258,13 +268,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		57B610DE2231B79E00EAD192 /* Date Helpers */ = {
+		57B610DE2231B79E00EAD192 /* Date Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				57B610DF2231B7C900EAD192 /* Date+Extensions.swift */,
 				57B610E12231B7EE00EAD192 /* String+DateExtensions.swift */,
 			);
-			path = "Date Helpers";
+			path = "Date Extensions";
 			sourceTree = "<group>";
 		};
 		57B610ED2231C9A900EAD192 /* Storyboards */ = {
@@ -279,7 +289,8 @@
 		57DAB51A2233E05300FDAEB2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5726205A2231E7A7003F0B1E /* UIViewController+Alerts.swift */,
+				57B610DE2231B79E00EAD192 /* Date Extensions */,
+				575A9ABE223543C8003AE4D0 /* UIViewController Extensions */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -618,6 +629,7 @@
 				57DAB51F2233EBFD00FDAEB2 /* DBService+Dish.swift in Sources */,
 				57B610D62231B3BC00EAD192 /* DBService.swift in Sources */,
 				57B610DB2231B41700EAD192 /* Dish.swift in Sources */,
+				575A9ABD22354383003AE4D0 /* UIViewController+Navigation.swift in Sources */,
 				57DAB52C2234492600FDAEB2 /* IBDesignableViews.swift in Sources */,
 				57B610E22231B7EE00EAD192 /* String+DateExtensions.swift in Sources */,
 				57B610C12231B15000EAD192 /* NationalDishesController.swift in Sources */,

@@ -18,10 +18,6 @@ class DishDetailViewController: UIViewController {
   public var dish: Dish!
   public var displayName: String? 
   
-  // TODO: setup outlets to show the dish image, display name for user who created the dish,
-  // TODO: also the dish description
-  // TODO: embed in a scroll view to account for a dynamic desription name
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.title = "\(dish.country) - \(dish.dishDescription)"
@@ -35,9 +31,7 @@ class DishDetailViewController: UIViewController {
     dishDescriptionLabel.text = dish.dishDescription
   }
   
-  // TODO: add a more info button which presents an action sheet that does the following:
   // TODO: user should be able to save image to device
-  // TODO: user should be able to delete the dish if they created it
   // TODO: user should be able to edit the dish if they created it
   
   @IBAction func moreInfoButtonPressed(_ sender: UIBarButtonItem) {

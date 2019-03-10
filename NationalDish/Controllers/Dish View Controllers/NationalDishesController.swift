@@ -29,6 +29,8 @@ class NationalDishesController: UIViewController {
     tableView.dataSource = self
     tableView.delegate = self
     tableView.register(UINib(nibName: "DishCell", bundle: nil), forCellReuseIdentifier: "DishCell")
+    authservice.authserviceSignOutDelegate = self
+    fetchNationalDishes()
   }
   
   private func fetchNationalDishes() {
@@ -43,18 +45,6 @@ class NationalDishesController: UIViewController {
         }
     }
   }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(true)
-    fetchNationalDishes()
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(true)
-    listener.remove()
-  }
-  
-  // TODO: segue to detail view controller when cell is selected
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "Show Dish Details" {
@@ -109,3 +99,10 @@ extension NationalDishesController: UITableViewDelegate {
   }
 }
 
+extension NationalDishesController: AuthServiceSignOutDelegate {
+  func didSignOut(_ authservice: AuthService) {
+    listener.remove()
+    showLoginView()
+  }
+  func didSignOutWithError(_ authservice: AuthService, error: Error) {}
+}

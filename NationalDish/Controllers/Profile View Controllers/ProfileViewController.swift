@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
     super.viewDidLoad()
     configureTableView()
     updateProfileUI()
+    profileHeaderView.delegate = self
   }
   
   private func configureTableView() {
@@ -70,6 +71,9 @@ extension ProfileViewController: UITableViewDelegate {
   }
 }
 
-// TODO: implement sign out from firebase
-
-// TODO: edit profile
+extension ProfileViewController: ProfileHeaderViewDelegate {
+  func willSignOut(_ profileHeaderView: ProfileHeaderView) {
+    authservice.signOutAccount()
+  }
+  func willEditProfile(_ profileHeaderView: ProfileHeaderView) {}
+}
