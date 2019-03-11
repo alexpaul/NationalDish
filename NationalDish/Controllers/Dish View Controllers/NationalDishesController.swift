@@ -80,6 +80,7 @@ extension NationalDishesController: UITableViewDataSource {
       fatalError("DishCell not found")
     }
     let dish = dishes[indexPath.row]
+    cell.selectionStyle = .none
     cell.countryLabel.text = dish.country
     cell.dishDescriptionLabel.text = dish.dishDescription
     cell.displayNameLabel.text = ""
