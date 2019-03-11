@@ -29,7 +29,15 @@ class AddDishViewController: UIViewController {
   }
   
   private func configureTextView() {
+    configureInputAccessoryView()
+    dishDescriptionTextView.delegate = self
+    dishDescriptionTextView.textColor = .lightGray
+    dishDescriptionTextView.text = Constants.DishDescriptionPlaceholder
+  }
+  
+  private func configureInputAccessoryView() {
     let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 44))
+    dishDescriptionTextView.inputAccessoryView = toolbar
     let cameraBarItem = UIBarButtonItem(barButtonSystemItem: .camera,
                                         target: self,
                                         action: #selector(cameraButtonPressed))
@@ -39,10 +47,6 @@ class AddDishViewController: UIViewController {
                                               action: #selector(photoLibraryButtonPressed))
     let flexibleSpaceBarItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
     toolbar.items = [cameraBarItem, flexibleSpaceBarItem, photoLibraryBarItem]
-    dishDescriptionTextView.inputAccessoryView = toolbar
-    dishDescriptionTextView.delegate = self
-    dishDescriptionTextView.textColor = .lightGray
-    dishDescriptionTextView.text = Constants.DishDescriptionPlaceholder
     if !UIImagePickerController.isSourceTypeAvailable(.camera) {
       cameraBarItem.isEnabled = false
     }
@@ -131,6 +135,8 @@ extension AddDishViewController: UIImagePickerControllerDelegate, UINavigationCo
       print("original image is nil")
       return
     }
+    // resizing image to reduce memory footprint while app in running
+    // if not app will terminate if memory runs low
     let resizedImage = Toucan.init(image: originalImage).resize(CGSize(width: 500, height: 500))
     selectedImage = resizedImage.image
     dishImageView.image = resizedImage.image

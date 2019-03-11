@@ -9,7 +9,7 @@
 import Foundation
 
 struct DishesCollectionKeys {
-  static let CollectionKey = "dishes"
+  static let CollectionKey = "dishes" // exact collection name on firebase
   static let CountryKey = "country"
   static let DishDescritionKey = "dishDescription"
   static let UserIdKey = "userId"
@@ -19,8 +19,14 @@ struct DishesCollectionKeys {
 }
 
 extension DBService {
+  // writing to firebase:
+  // 1. we need a reference to the database - DBService.firestoreDB
+  // 2. what collection are you writing to? e.g "dishes" (DishesCollectionKeys.CollectionKey)
+  // 3. write to the collection e.g setData, updateData, delete
+  // create new document - use setData
+  // update existing document - use updateData
   static public func postDish(dish: Dish, completion: @escaping (Error?) -> Void) {
-    firestoreDB.collection(DishesCollectionKeys.CollectionKey)
+    DBService.firestoreDB.collection(DishesCollectionKeys.CollectionKey)
       .document(dish.documentId).setData([
         DishesCollectionKeys.CreatedDateKey     : dish.createdDate,
         DishesCollectionKeys.CountryKey         : dish.country, 

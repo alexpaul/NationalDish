@@ -47,6 +47,12 @@ class EditDishViewController: UIViewController {
           self?.showAlert(title: "Editing Error", message: error.localizedDescription)
         }
         self?.navigationItem.rightBarButtonItem?.isEnabled = true
+        
+        // setting up unwind segue
+        // step 2: implement perform segue in view controller unwinding from
+        // step 3: set segue identifier in storybaord
+        // control drag from "yellow" storyboard icon over to "exit" icon and select
+        // "unwindFrom....function" that refers to the function in the first view controller
         self?.performSegue(withIdentifier: "Unwind From Edit Dish", sender: self)
     }
   }

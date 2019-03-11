@@ -13,7 +13,7 @@ extension UIViewController {
     if let _ = storyboard?.instantiateViewController(withIdentifier: "DishesTabBarController") as? DishesTabBarController {
       let loginViewStoryboard = UIStoryboard(name: "LoginView", bundle: nil)
       if let loginViewController = loginViewStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = loginViewController
+        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = UINavigationController(rootViewController: loginViewController)
       }
     } else {
       dismiss(animated: true)

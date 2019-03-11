@@ -16,6 +16,7 @@ struct Dish {
   let imageURL: String
   let userId: String
   
+  // mostly used for posting to firebase
   init(country: String, dishDescription: String, documentId: String, createdDate: String, imageURL: String, userId: String) {
     self.country = country
     self.dishDescription = dishDescription
@@ -25,6 +26,7 @@ struct Dish {
     self.userId = userId
   }
   
+  // used to read a snapshot from firebase - snapshot.data() is a dictionary
   init(dict: [String: Any]) {
     self.country = dict[DishesCollectionKeys.CountryKey] as? String ?? ""
     self.dishDescription = dict[DishesCollectionKeys.DishDescritionKey] as? String ?? ""

@@ -40,13 +40,27 @@ class NationalDishesController: UIViewController {
   }
   
   @objc private func fetchNationalDishes() {
+    // creating a listener
+    // 1. get database reference DBService.firestoreDB
+    // 2. which collection do you want to observe (listen) to?
+    // 3. add listener (addSnapshotListener)
+    
     refreshControl.beginRefreshing()
     listener = DBService.firestoreDB
       .collection(DishesCollectionKeys.CollectionKey)
+      // always observes firebase in real-time for data changes
+      // [weak self] - closure list, breaks potential memory leaks
+      // [weak self] - breaks strong retain cycles
+      // use [weak self] when closure may be around longer than view controller
+      // use [unowned self] when view controller is GURANTEED to be around longer
+      // than closure
+      // if we don't user weak or unowned it will be strong by default which will lead to a memory leak
+      // Apple Docs: https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html
       .addSnapshotListener { [weak self] (snapshot, error) in
         if let error = error {
           print("failed to fetch dishes with error: \(error.localizedDescription)")
         } else if let snapshot = snapshot {
+          // anytime there is a modified change to the database our table view updates
           self?.dishes = snapshot.documents.map { Dish(dict: $0.data()) }
                                            .sorted { $0.createdDate.date() > $1.createdDate.date() }
         }
@@ -84,6 +98,7 @@ extension NationalDishesController: UITableViewDataSource {
     cell.countryLabel.text = dish.country
     cell.dishDescriptionLabel.text = dish.dishDescription
     cell.displayNameLabel.text = ""
+    cell.dishImageView.kf.indicatorType = .activity
     cell.dishImageView.kf.setImage(with: URL(string: dish.imageURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
     fetchDishCreator(userId: dish.userId, cell: cell, dish: dish)
     return cell

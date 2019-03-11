@@ -32,6 +32,9 @@ class DishDetailViewController: UIViewController {
     dishDescriptionLabel.text = dish.dishDescription
   }
   
+  // setting up unwind segue
+  // step 1: create unwindFrom....function
+  // writing this function in view controller unwinding to
   @IBAction func unwindFromEditDishView(segue: UIStoryboardSegue) {
     let editVC = segue.source as! EditDishViewController
     countryNameLabel.text = editVC.countryTextField.text
