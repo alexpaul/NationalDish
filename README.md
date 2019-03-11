@@ -81,6 +81,14 @@ NationalDish app enables users to post their country's National Dish to the publ
   <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/dishes-view.png" width="250" height="541" />
 </p>
 
+**Detail Screen**   
+
+- user edit, delete and save image
+
+<p align="center">
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/detail-view.png" width="250" height="541" />
+</p>
+
 **Profile View**    
 
 - user can sign out 
@@ -89,7 +97,7 @@ NationalDish app enables users to post their country's National Dish to the publ
 - user can see their posts (all dishes they have created) 
 
 <p align="center">
-  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/profile-view.png" width="250" height="541" />
+  <img src="https://github.com/alexpaul/NationalDish/blob/master/Images/profile.png" width="250" height="541" />
 </p>
 
 
