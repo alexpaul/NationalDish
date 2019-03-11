@@ -23,6 +23,12 @@ class NationalDishesController: UIViewController {
   }
   private var listener: ListenerRegistration!
   private var authservice = AppDelegate.authservice
+  private lazy var refreshControl: UIRefreshControl = {
+    let rc = UIRefreshControl()
+    tableView.refreshControl = rc
+    rc.addTarget(self, action: #selector(fetchNationalDishes), for: .valueChanged)
+    return rc
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,7 +39,8 @@ class NationalDishesController: UIViewController {
     fetchNationalDishes()
   }
   
-  private func fetchNationalDishes() {
+  @objc private func fetchNationalDishes() {
+    refreshControl.beginRefreshing()
     listener = DBService.firestoreDB
       .collection(DishesCollectionKeys.CollectionKey)
       .addSnapshotListener { [weak self] (snapshot, error) in
@@ -42,6 +49,9 @@ class NationalDishesController: UIViewController {
         } else if let snapshot = snapshot {
           self?.dishes = snapshot.documents.map { Dish(dict: $0.data()) }
                                            .sorted { $0.createdDate.date() > $1.createdDate.date() }
+        }
+        DispatchQueue.main.async {
+          self?.refreshControl.endRefreshing()
         }
     }
   }

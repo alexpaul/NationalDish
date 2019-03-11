@@ -9,32 +9,40 @@
 import UIKit
 
 class DishDetailViewController: UIViewController {
-  
   @IBOutlet weak var dishImageView: UIImageView!
   @IBOutlet weak var displayNameLabel: UILabel!
   @IBOutlet weak var countryNameLabel: UILabel!
   @IBOutlet weak var dishDescriptionLabel: UILabel!
   
-  public var dish: Dish!
-  public var displayName: String? 
+  private let authservice = AppDelegate.authservice
   
+  public var dish: Dish!
+  public var displayName: String?
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationItem.title = "\(dish.country) - \(dish.dishDescription)"
     upadateUI()
   }
   
   private func upadateUI() {
+    navigationItem.title = "\(dish.country) - \(dish.dishDescription)"
     dishImageView.kf.setImage(with: URL(string: dish.imageURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
     displayNameLabel.text = (displayName ?? "username")
     countryNameLabel.text = dish.country
     dishDescriptionLabel.text = dish.dishDescription
   }
   
-  // TODO: user should be able to save image to device
-  // TODO: user should be able to edit the dish if they created it
+  @IBAction func unwindFromEditDishView(segue: UIStoryboardSegue) {
+    let editVC = segue.source as! EditDishViewController
+    countryNameLabel.text = editVC.countryTextField.text
+    dishDescriptionLabel.text = editVC.dishDescriptionTextView.text
+  }
   
   @IBAction func moreInfoButtonPressed(_ sender: UIBarButtonItem) {
+    guard let user = authservice.getCurrentUser() else {
+      print("no logged user")
+      return
+    }
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     let saveImageAction = UIAlertAction(title: "Save Image", style: .default) { [unowned self] (action) in
       if let image = self.dishImageView.image {
@@ -51,8 +59,10 @@ class DishDetailViewController: UIViewController {
     }
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
     alertController.addAction(saveImageAction)
-    alertController.addAction(editAction)
-    alertController.addAction(deleteAction)
+    if user.uid == dish.userId {
+      alertController.addAction(editAction)
+      alertController.addAction(deleteAction)
+    }
     alertController.addAction(cancelAction)
     present(alertController, animated: true)
   }
@@ -71,7 +81,11 @@ class DishDetailViewController: UIViewController {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "Show Edit Dish" {
-      
+      guard let navController = segue.destination as? UINavigationController,
+        let editVC = navController.viewControllers.first as? EditDishViewController else {
+          fatalError("failed to segue to editVC")
+      }
+      editVC.dish = dish
     }
   }
   

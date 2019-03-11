@@ -9,7 +9,6 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-  
   @IBOutlet weak var tableView: UITableView!
   
   private lazy var profileHeaderView: ProfileHeaderView = {
@@ -17,14 +16,24 @@ class ProfileViewController: UIViewController {
     return headerView
   }()
   private let authservice = AppDelegate.authservice
-  
-  // TODO: create a variable called "dishes" that will be the data for the table view: see logic in (NationalDishesController)
+  private var dishes = [Dish]() {
+    didSet {
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
-    updateProfileUI()
     profileHeaderView.delegate = self
+    fetchUsersDishes()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    updateProfileUI()
   }
   
   private func configureTableView() {
@@ -39,39 +48,80 @@ class ProfileViewController: UIViewController {
       print("no logged user")
       return
     }
-    profileHeaderView.displayNameLabel.text = "@" + (user.displayName ?? "rogueAgent")
+    DBService.fetchUser(userId: user.uid) { [weak self] (error, user) in
+      if let _ = error {
+        self?.showAlert(title: "Error fetching account info", message: error?.localizedDescription)
+      } else if let user = user {
+        self?.profileHeaderView.displayNameLabel.text = "@" + user.displayName
+        guard let photoURL = user.photoURL,
+          !photoURL.isEmpty else {
+            return
+        }
+        self?.profileHeaderView.profileImageView.kf.setImage(with: URL(string: photoURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
+      }
+    }
   }
   
-  // TODO: write a function to query firestore database for only the current user's posted dishes
-  // TODO: sort by most recently added
+  private func fetchUsersDishes() {
+    guard let user = authservice.getCurrentUser() else {
+      print("no logged user")
+      return
+    }
+    let _ = DBService.firestoreDB
+      .collection(DishesCollectionKeys.CollectionKey)
+      .whereField(DishesCollectionKeys.UserIdKey, isEqualTo: user.uid)
+      .addSnapshotListener { [weak self] (snapshot, error) in
+        if let error = error {
+          self?.showAlert(title: "Error fetching dishes", message: error.localizedDescription)
+        } else if let snapshot = snapshot {
+          self?.dishes = snapshot.documents.map { Dish(dict: $0.data()) }
+        }
+    }
+  }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "Show Edit Profile" {
-      
+      guard let navController = segue.destination as? UINavigationController,
+        let editProfileVC = navController.viewControllers.first as? EditProfileViewController
+      else {
+        fatalError("editProfileVC not found")
+      }
+      editProfileVC.profileImage = profileHeaderView.profileImageView.image
+      editProfileVC.displayName = profileHeaderView.displayNameLabel.text
+    } else if segue.identifier == "Show Dish Details" {
+      guard let indexPath = sender as? IndexPath,
+        let cell = tableView.cellForRow(at: indexPath) as? DishCell,
+        let dishDVC = segue.destination as? DishDetailViewController else {
+          fatalError("cannot segue to dishDVC")
+      }
+      let dish = dishes[indexPath.row]
+      dishDVC.displayName = cell.displayNameLabel.text
+      dishDVC.dish = dish
     }
   }
 }
 
 extension ProfileViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // TODO: return the count from the current user's dishes
-    return 10
+    return dishes.count
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "DishCell", for: indexPath) as? DishCell else {
       fatalError("DishCell not found")
     }
-    // TODO: setup the cell
-    // TODO: displayName
-    // TODO: country
-    // TODO: dishDescription
-    // TODO: dish image
-    // see cellForRow in (NationalDishesController)
+    let dish = dishes[indexPath.row]
+    cell.countryLabel.text = dish.country
+    cell.dishDescriptionLabel.text = dish.dishDescription
+    cell.displayNameLabel.text = ""
+    cell.dishImageView.kf.setImage(with: URL(string: dish.imageURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
     return cell
   }
 }
 
 extension ProfileViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "Show Dish Details", sender: indexPath)
+  }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return Constants.DishCellHeight
   }

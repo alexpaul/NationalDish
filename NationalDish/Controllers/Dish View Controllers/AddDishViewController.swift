@@ -63,6 +63,7 @@ class AddDishViewController: UIViewController {
   }
   
   @IBAction func addDishButtonPressed(_ sender: UIBarButtonItem) {
+    navigationItem.rightBarButtonItem?.isEnabled = false
     guard let country = countryTextField.text,
       !country.isEmpty,
       let dishDescription = dishDescriptionTextView.text,
@@ -99,6 +100,7 @@ class AddDishViewController: UIViewController {
                                     }
                                   }
                                 }
+                                self?.navigationItem.rightBarButtonItem?.isEnabled = true
                               }
     }
   }

@@ -161,8 +161,8 @@
 			children = (
 				57B610C02231B15000EAD192 /* NationalDishesController.swift */,
 				5726206022327B22003F0B1E /* AddDishViewController.swift */,
-				5726206222327B3D003F0B1E /* EditDishViewController.swift */,
 				57DAB52D2234506500FDAEB2 /* DishDetailViewController.swift */,
+				5726206222327B3D003F0B1E /* EditDishViewController.swift */,
 			);
 			path = "Dish View Controllers";
 			sourceTree = "<group>";

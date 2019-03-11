@@ -85,7 +85,36 @@
                     <view key="view" contentMode="scaleToFill" id="ALv-iU-RZc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xy5-rD-Mxz">
+                                <rect key="frame" x="16" y="80" width="343" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="efD-7u-b96"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Dish Description....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="set-QZ-cEp">
+                                <rect key="frame" x="16" y="150" width="343" height="220"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Bl5-XT-OHo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xy5-rD-Mxz" firstAttribute="leading" secondItem="XHI-Bh-FfV" secondAttribute="leading" constant="16" id="74D-91-Ncw"/>
+                            <constraint firstItem="XHI-Bh-FfV" firstAttribute="trailing" secondItem="set-QZ-cEp" secondAttribute="trailing" constant="16" id="PVU-v9-Mtk"/>
+                            <constraint firstItem="XHI-Bh-FfV" firstAttribute="trailing" secondItem="Xy5-rD-Mxz" secondAttribute="trailing" constant="16" id="bP0-JW-61z"/>
+                            <constraint firstItem="set-QZ-cEp" firstAttribute="leading" secondItem="XHI-Bh-FfV" secondAttribute="leading" constant="16" id="bwq-sJ-VZ4"/>
+                            <constraint firstItem="Xy5-rD-Mxz" firstAttribute="top" secondItem="XHI-Bh-FfV" secondAttribute="top" constant="16" id="eZK-ag-tf0"/>
+                            <constraint firstItem="set-QZ-cEp" firstAttribute="top" secondItem="Xy5-rD-Mxz" secondAttribute="bottom" constant="20" id="zqn-EQ-Qxx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XHI-Bh-FfV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Dish" id="qeD-wZ-uqa">
@@ -100,10 +129,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="countryTextField" destination="Xy5-rD-Mxz" id="kbr-i7-oUh"/>
+                        <outlet property="dishDescriptionTextView" destination="set-QZ-cEp" id="aHx-Do-cuk"/>
+                        <segue destination="ren-x3-unF" kind="unwind" identifier="Unwind From Edit Dish" unwindAction="unwindFromEditDishViewWithSegue:" id="OeM-wL-v6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEp-Eo-8Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ren-x3-unF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4606" y="-663"/>
+            <point key="canvasLocation" x="4605.6000000000004" y="-663.41829085457277"/>
         </scene>
         <!--National Dishes-->
         <scene sceneID="tne-QT-ifu">
@@ -286,6 +321,7 @@
                     <connections>
                         <outlet property="tableView" destination="OCl-8c-XCP" id="r78-cu-N9U"/>
                         <segue destination="hPI-H9-q9H" kind="presentation" identifier="Show Edit Profile" id="xH8-jA-o4G"/>
+                        <segue destination="Bzt-zB-glE" kind="show" identifier="Show Dish Details" id="kla-aU-aS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4B-Ex-18B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,11 +331,41 @@
         <!--Edit Profile-->
         <scene sceneID="CQb-In-cwS">
             <objects>
-                <viewController id="Bxk-w3-5qJ" customClass="EditProfileViewController" customModule="NationalDish" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileViewController" id="Bxk-w3-5qJ" customClass="EditProfileViewController" customModule="NationalDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HCS-m1-fnN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCu-kC-9iS" customClass="CircularButton" customModule="NationalDish" customModuleProvider="target">
+                                <rect key="frame" x="127.5" y="80" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="9Ak-p8-gHu"/>
+                                    <constraint firstAttribute="width" constant="120" id="qj7-0O-87u"/>
+                                </constraints>
+                                <state key="normal" image="placeholder-image"/>
+                                <connections>
+                                    <action selector="profileImageButtonPressed" destination="Bxk-w3-5qJ" eventType="touchUpInside" id="3Wq-2O-jtN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter your username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2K-kk-E1k">
+                                <rect key="frame" x="16" y="208" width="343" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="C5G-1D-GsI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D4l-Jc-BIo" firstAttribute="trailing" secondItem="x2K-kk-E1k" secondAttribute="trailing" constant="16" id="H1O-oM-pjE"/>
+                            <constraint firstItem="x2K-kk-E1k" firstAttribute="leading" secondItem="D4l-Jc-BIo" secondAttribute="leading" constant="16" id="PNZ-yh-VRh"/>
+                            <constraint firstItem="wCu-kC-9iS" firstAttribute="centerX" secondItem="HCS-m1-fnN" secondAttribute="centerX" id="SdA-Qn-KIA"/>
+                            <constraint firstItem="x2K-kk-E1k" firstAttribute="top" secondItem="wCu-kC-9iS" secondAttribute="bottom" constant="8" id="fkW-yS-ug5"/>
+                            <constraint firstItem="wCu-kC-9iS" firstAttribute="top" secondItem="D4l-Jc-BIo" secondAttribute="top" constant="16" id="g2e-7m-kcc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D4l-Jc-BIo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="MWu-aH-elf">
@@ -314,10 +380,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="x2K-kk-E1k" id="oo6-Gn-6Ei"/>
+                        <outlet property="profileImageViewButton" destination="wCu-kC-9iS" id="eXX-nD-MMZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJf-Nc-m7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="1462"/>
+            <point key="canvasLocation" x="2824.8000000000002" y="1460.4197901049477"/>
         </scene>
         <!--National Dishes-->
         <scene sceneID="u2c-vl-t0T">
@@ -415,7 +485,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YwG-1j-qp8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hPI-H9-q9H" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="EditProfileNavController" automaticallyAdjustsScrollViewInsets="NO" id="hPI-H9-q9H" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dTk-VH-LKK">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -437,4 +507,7 @@
         <image name="placeholder-image" width="512" height="512"/>
         <image name="profile-icon" width="29" height="29"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kla-aU-aS7"/>
+    </inferredMetricsTieBreakers>
 </document>

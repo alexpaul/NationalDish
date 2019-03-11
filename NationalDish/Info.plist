@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow NationalDish access to your camera in order to update your profile photo</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Please allow NationalDish access for saving photos to your photo library.</string>
 	<key>UILaunchStoryboardName</key>
