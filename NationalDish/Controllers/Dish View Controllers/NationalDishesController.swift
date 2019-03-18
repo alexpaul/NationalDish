@@ -29,6 +29,12 @@ class NationalDishesController: UIViewController {
     rc.addTarget(self, action: #selector(fetchNationalDishes), for: .valueChanged)
     return rc
   }()
+  private lazy var dishCreatorCache: NSCache<NSString, NDUser> = {
+    let cache = NSCache<NSString, NDUser>()
+    cache.totalCostLimit = 10 * 1024 * 1024
+    cache.countLimit = 100
+    return cache
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -100,16 +106,21 @@ extension NationalDishesController: UITableViewDataSource {
     cell.displayNameLabel.text = ""
     cell.dishImageView.kf.indicatorType = .activity
     cell.dishImageView.kf.setImage(with: URL(string: dish.imageURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
-    fetchDishCreator(userId: dish.userId, cell: cell, dish: dish)
+    if let dishCreator = dishCreatorCache.object(forKey: dish.userId as NSString) {
+      cell.displayNameLabel.text = "@" + dishCreator.displayName
+    } else {
+      fetchDishCreator(userId: dish.userId, cell: cell, dish: dish)
+    }
     return cell
   }
   
   private func fetchDishCreator(userId: String, cell: DishCell, dish: Dish) {
-    DBService.fetchDishCreator(userId: userId) { (error, dishCreator) in
+    DBService.fetchUser(userId: userId) { [weak self] (error, dishCreator) in
       if let error = error {
         print("failed to fetch dish creator with error: \(error.localizedDescription)")
       } else if let dishCreator = dishCreator {
         cell.displayNameLabel.text = "@" + dishCreator.displayName
+        self?.dishCreatorCache.setObject(dishCreator, forKey: dishCreator.userId as NSString)
       }
     }
   }

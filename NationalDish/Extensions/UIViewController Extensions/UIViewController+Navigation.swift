@@ -11,6 +11,7 @@ import UIKit
 extension UIViewController {
   public func showLoginView() {
     if let _ = storyboard?.instantiateViewController(withIdentifier: "DishesTabBarController") as? DishesTabBarController {
+      dismiss(animated: true)
       let loginViewStoryboard = UIStoryboard(name: "LoginView", bundle: nil)
       if let loginViewController = loginViewStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
         (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = UINavigationController(rootViewController: loginViewController)

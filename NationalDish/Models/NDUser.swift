@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NDUser {
+class NDUser {
   let userId: String
   let displayName: String
   let email: String

@@ -45,6 +45,10 @@ extension DBService {
   }
   
   static public func deleteDish(dish: Dish, completion: @escaping (Error?) -> Void) {
+    // steps for deleting
+    // step1: we need the database reference (DBService.firestoreDB)
+    // step2: get the collection we're interested in
+    // step3: pass in the dish's document id you want to delete
     DBService.firestoreDB
       .collection(DishesCollectionKeys.CollectionKey)
       .document(dish.documentId)
@@ -53,20 +57,6 @@ extension DBService {
           completion(error)
         } else {
           completion(nil)
-        }
-    }
-  }
-  
-  static public func fetchDishCreator(userId: String, completion: @escaping (Error?, NDUser?) -> Void) {
-    DBService.firestoreDB
-      .collection(NDUsersCollectionKeys.CollectionKey)
-      .whereField(NDUsersCollectionKeys.UserIdKey, isEqualTo: userId)
-      .getDocuments { (snapshot, error) in
-        if let error = error {
-          completion(error, nil)
-        } else if let snapshot = snapshot?.documents.first {
-          let dishCreator = NDUser(dict: snapshot.data())
-          completion(nil, dishCreator)
         }
     }
   }

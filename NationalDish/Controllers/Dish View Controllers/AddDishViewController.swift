@@ -80,6 +80,8 @@ class AddDishViewController: UIViewController {
       print("no logged user")
       return
     }
+    // first generate a document id from firebase
+    // this will be the unique id to retrieve the document
     let docRef = DBService.firestoreDB
                               .collection(DishesCollectionKeys.CollectionKey)
                               .document()

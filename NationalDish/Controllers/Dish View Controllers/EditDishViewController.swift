@@ -37,6 +37,11 @@ class EditDishViewController: UIViewController {
         showAlert(title: "Missing Fields", message: "Country and Dish Description are Required")
         return
     }
+    // updating firebase
+    // step 1: get the database reference
+    // step 2: get the collection
+    // step 3: pass the documennt id
+    // step 4: update fields as necessary
     DBService.firestoreDB
       .collection(DishesCollectionKeys.CollectionKey)
       .document(dish.documentId)
