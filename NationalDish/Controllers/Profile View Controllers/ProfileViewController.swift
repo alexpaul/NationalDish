@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
@@ -23,6 +24,7 @@ class ProfileViewController: UIViewController {
       }
     }
   }
+  private var listener: ListenerRegistration!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -67,7 +69,7 @@ class ProfileViewController: UIViewController {
       print("no logged user")
       return
     }
-    let _ = DBService.firestoreDB
+    listener = DBService.firestoreDB
       .collection(DishesCollectionKeys.CollectionKey)
       .whereField(DishesCollectionKeys.UserIdKey, isEqualTo: user.uid)
       .addSnapshotListener { [weak self] (snapshot, error) in
@@ -130,6 +132,7 @@ extension ProfileViewController: UITableViewDelegate {
 
 extension ProfileViewController: ProfileHeaderViewDelegate {
   func willSignOut(_ profileHeaderView: ProfileHeaderView) {
+    listener.remove()
     authservice.signOutAccount()
   }
   func willEditProfile(_ profileHeaderView: ProfileHeaderView) {
